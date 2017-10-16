@@ -7,7 +7,7 @@
 //
 
 #import "LaunchController.h"
-
+#define imageCount 3
 @interface LaunchController ()
 
 @end
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * imageCount, SCREEN_HEIGHT);
+    [self.view addSubview:_scrollView];
 }
 
 - (void)didReceiveMemoryWarning {

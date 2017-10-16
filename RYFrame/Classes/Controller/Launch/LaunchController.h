@@ -8,6 +8,12 @@
 
 #import "RYBaseController.h"
 
-@interface LaunchController : RYBaseController
+@interface LaunchController : UIViewController
+
+/**
+ 引导页
+ */
+@property (nonatomic,strong)UIScrollView * scrollView;
+
 
 @end

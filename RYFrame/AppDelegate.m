@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainController.h"
 #import "IQKeyboardManager.h"
+#import "LaunchController.h"
 @interface AppDelegate ()
 
 @end
@@ -52,6 +53,11 @@
 
 #pragma mark -- app第一次启动
 - (void)app_FirstLaunch{
+    LaunchController * launchVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchController"];
+    self.window.rootViewController = launchVC;
+}
+#pragma mark -- app非第一次启动
+- (void)app_NotFirstLaunch{
     MainController * mainVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainController"];
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     nav.navigationBarHidden = YES;
