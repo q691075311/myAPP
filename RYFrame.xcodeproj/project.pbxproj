@@ -14,6 +14,7 @@
 		4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */; };
 		4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E4C1F9485E70020D642 /* MainRequest.m */; };
 		4B5F4E591F948D890020D642 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E581F948D890020D642 /* MainModel.m */; };
+		4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E5C1F94930C0020D642 /* LaunchController.m */; };
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
@@ -40,6 +41,8 @@
 		4B5F4E4C1F9485E70020D642 /* MainRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRequest.m; sourceTree = "<group>"; };
 		4B5F4E571F948D890020D642 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		4B5F4E581F948D890020D642 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		4B5F4E5B1F94930C0020D642 /* LaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchController.h; sourceTree = "<group>"; };
+		4B5F4E5C1F94930C0020D642 /* LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchController.m; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 		4B5F4E541F948D650020D642 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4B5F4E5A1F9492CE0020D642 /* Launch */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +135,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4B5F4E5A1F9492CE0020D642 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				4B5F4E5B1F94930C0020D642 /* LaunchController.h */,
+				4B5F4E5C1F94930C0020D642 /* LaunchController.m */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		4BE9B7051F67903300DBFF67 /* UITool */ = {
@@ -196,8 +209,6 @@
 		4BFC3A641F4E9C6A000EE6E3 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				4BAFF9611F6A2A8100B88DA6 /* RYBaseRequest.h */,
-				4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */,
 				4B5F4E4A1F9485C50020D642 /* MainRequest */,
 			);
 			path = NetWork;
@@ -217,6 +228,8 @@
 		4BFC3A671F4E9C88000EE6E3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4BAFF9611F6A2A8100B88DA6 /* RYBaseRequest.h */,
+				4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */,
 				4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */,
 				4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */,
 				4BE9B6FF1F676BE000DBFF67 /* RYBaseController.h */,
@@ -384,6 +397,7 @@
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,
 				4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */,
+				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,
