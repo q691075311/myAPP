@@ -14,8 +14,13 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 //屏幕的高度
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+//判断是否为iPhoneX
+#define iPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size) : NO)
 //顶部状态栏的高度
 #define TOPBAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
+//获取iPhone X的tabbar高度
+#define TABBARHEIGTH iPHONE_X == NO ? 0 : 34
+
 
 #define BaseURL @"http://m.funqu.cn/d/"
 #define POST_URL @"phone/product/bannerList"
