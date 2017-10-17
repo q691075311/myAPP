@@ -10,6 +10,7 @@
 #import "MainController.h"
 #import "IQKeyboardManager.h"
 #import "LaunchController.h"
+#import "TabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -55,6 +56,8 @@
 - (void)app_FirstLaunch{
     LaunchController * launchVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchController"];
     self.window.rootViewController = launchVC;
+    TabBarController * tabBar = [[TabBarController alloc] init];
+    [self.window addSubview:tabBar.view];
 }
 #pragma mark -- app非第一次启动
 - (void)app_NotFirstLaunch{

@@ -18,8 +18,15 @@
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
+		4BB9639E1F95B59D003E5814 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9639D1F95B59D003E5814 /* TabBarController.m */; };
+		4BB963A41F95CA8F003E5814 /* MeListen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB963A31F95CA8F003E5814 /* MeListen.storyboard */; };
 		4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7001F676BE000DBFF67 /* RYBaseController.m */; };
 		4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7031F67842B00DBFF67 /* MainController.m */; };
+		4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657711F95D35200E8ECD6 /* Find.storyboard */; };
+		4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657731F95D36D00E8ECD6 /* Login.storyboard */; };
+		4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF657761F95D3B300E8ECD6 /* MeListenController.m */; };
+		4BF6577A1F95D3C700E8ECD6 /* FindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF657791F95D3C700E8ECD6 /* FindController.m */; };
+		4BF6577D1F95D3DB00E8ECD6 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6577C1F95D3DB00E8ECD6 /* LoginController.m */; };
 		4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC3A461F4E98F5000EE6E3 /* main.m */; };
 		4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC3A491F4E98F5000EE6E3 /* AppDelegate.m */; };
 		4BFC3A501F4E98F5000EE6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC3A4E1F4E98F5000EE6E3 /* Main.storyboard */; };
@@ -48,10 +55,21 @@
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
 		4BAFF9611F6A2A8100B88DA6 /* RYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYBaseRequest.h; sourceTree = "<group>"; };
 		4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseRequest.m; sourceTree = "<group>"; };
+		4BB9639C1F95B59D003E5814 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		4BB9639D1F95B59D003E5814 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		4BB963A31F95CA8F003E5814 /* MeListen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeListen.storyboard; sourceTree = "<group>"; };
 		4BE9B6FF1F676BE000DBFF67 /* RYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYBaseController.h; sourceTree = "<group>"; };
 		4BE9B7001F676BE000DBFF67 /* RYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseController.m; sourceTree = "<group>"; };
 		4BE9B7021F67842B00DBFF67 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		4BE9B7031F67842B00DBFF67 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		4BF657711F95D35200E8ECD6 /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		4BF657731F95D36D00E8ECD6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4BF657751F95D3B300E8ECD6 /* MeListenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeListenController.h; sourceTree = "<group>"; };
+		4BF657761F95D3B300E8ECD6 /* MeListenController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeListenController.m; sourceTree = "<group>"; };
+		4BF657781F95D3C700E8ECD6 /* FindController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindController.h; sourceTree = "<group>"; };
+		4BF657791F95D3C700E8ECD6 /* FindController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindController.m; sourceTree = "<group>"; };
+		4BF6577B1F95D3DB00E8ECD6 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		4BF6577C1F95D3DB00E8ECD6 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		4BFC3A421F4E98F5000EE6E3 /* RYFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFC3A461F4E98F5000EE6E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BFC3A481F4E98F5000EE6E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +134,12 @@
 		4B5F4E541F948D650020D642 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4BB963A51F95CB21003E5814 /* 首页 */,
+				4BE9B7021F67842B00DBFF67 /* MainController.h */,
+				4BE9B7031F67842B00DBFF67 /* MainController.m */,
+				4BB963A61F95CB30003E5814 /* 我听 */,
+				4BB963A71F95CB3C003E5814 /* 发现 */,
+				4BB963A81F95CB45003E5814 /* 登录 */,
 				4B5F4E5A1F9492CE0020D642 /* Launch */,
 			);
 			path = Controller;
@@ -146,6 +170,40 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		4BB963A51F95CB21003E5814 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		4BB963A61F95CB30003E5814 /* 我听 */ = {
+			isa = PBXGroup;
+			children = (
+				4BF657751F95D3B300E8ECD6 /* MeListenController.h */,
+				4BF657761F95D3B300E8ECD6 /* MeListenController.m */,
+			);
+			path = "我听";
+			sourceTree = "<group>";
+		};
+		4BB963A71F95CB3C003E5814 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				4BF657781F95D3C700E8ECD6 /* FindController.h */,
+				4BF657791F95D3C700E8ECD6 /* FindController.m */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		4BB963A81F95CB45003E5814 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				4BF6577B1F95D3DB00E8ECD6 /* LoginController.h */,
+				4BF6577C1F95D3DB00E8ECD6 /* LoginController.m */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
 		4BE9B7051F67903300DBFF67 /* UITool */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +212,8 @@
 				4B5F1AF01F67AFF300A9918F /* RYNavBar.h */,
 				4B5F1AF11F67AFF300A9918F /* RYNavBar.m */,
 				4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */,
+				4BB9639C1F95B59D003E5814 /* TabBarController.h */,
+				4BB9639D1F95B59D003E5814 /* TabBarController.m */,
 			);
 			path = UITool;
 			sourceTree = "<group>";
@@ -186,9 +246,10 @@
 				4BFC3A661F4E9C6A000EE6E3 /* Tool */,
 				4BFC3A481F4E98F5000EE6E3 /* AppDelegate.h */,
 				4BFC3A491F4E98F5000EE6E3 /* AppDelegate.m */,
-				4BE9B7021F67842B00DBFF67 /* MainController.h */,
-				4BE9B7031F67842B00DBFF67 /* MainController.m */,
 				4BFC3A4E1F4E98F5000EE6E3 /* Main.storyboard */,
+				4BB963A31F95CA8F003E5814 /* MeListen.storyboard */,
+				4BF657711F95D35200E8ECD6 /* Find.storyboard */,
+				4BF657731F95D36D00E8ECD6 /* Login.storyboard */,
 				4BFC3A541F4E98F6000EE6E3 /* Assets.xcassets */,
 				4BFC3A561F4E98F6000EE6E3 /* LaunchScreen.storyboard */,
 				4BFC3A591F4E98F6000EE6E3 /* Info.plist */,
@@ -319,10 +380,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB963A41F95CA8F003E5814 /* MeListen.storyboard in Resources */,
 				4BFC3A581F4E98F6000EE6E3 /* LaunchScreen.storyboard in Resources */,
+				4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */,
 				4BFC3A551F4E98F6000EE6E3 /* Assets.xcassets in Resources */,
 				4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */,
 				4BFC3A501F4E98F5000EE6E3 /* Main.storyboard in Resources */,
+				4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +455,15 @@
 			files = (
 				4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */,
 				4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */,
+				4BB9639E1F95B59D003E5814 /* TabBarController.m in Sources */,
 				4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */,
+				4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */,
 				4B5F4E591F948D890020D642 /* MainModel.m in Sources */,
 				4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */,
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,
+				4BF6577D1F95D3DB00E8ECD6 /* LoginController.m in Sources */,
+				4BF6577A1F95D3C700E8ECD6 /* FindController.m in Sources */,
 				4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */,
 				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
