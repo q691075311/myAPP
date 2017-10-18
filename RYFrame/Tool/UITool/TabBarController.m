@@ -11,6 +11,7 @@
 #import "MeListenController.h"
 #import "FindController.h"
 #import "LoginController.h"
+#import "TabbarPlayView.h"
 @interface TabBarController ()
 
 @end
@@ -20,10 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tabBar.backgroundColor = [UIColor whiteColor];
+    //设置tabbar的shadow
+    [self.tabBar setShadowImage:[UIImage imageNamed:@"tabbarshadow"]];
+    [self.tabBar setBackgroundImage:[[UIImage alloc]init]];
+    //设置tabbar的背景颜色
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [UITabBar appearance].translucent = NO;
     [self configTabbar];
 }
-
+- (void)viewWillLayoutSubviews{
+    NSLog(@"viewWillLayoutSubviews");
+    [self addTabbarPlayView];
+}
+#pragma mark -- 添加tabbar的播放View
+- (void)addTabbarPlayView{
+    TabbarPlayView * playView = [TabbarPlayView sharePlayView];
+    [playView show];
+}
+#pragma mark -- 配置tabbar
 - (void)configTabbar{
     UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
     window.backgroundColor = [UIColor whiteColor];
@@ -74,13 +89,15 @@
     [self addChildViewController:findNav];
     [self addChildViewController:loginNav];
     window.rootViewController = self;
+    
 }
+#pragma mark -- 配置图片
 - (void)setTabBarItemPropertyWithController:(UIViewController *)viewController withImage:(UIImage *)image withSelecterImage:(UIImage *)selecterImage{
     //设置选中图片
     viewController.tabBarItem.selectedImage = [selecterImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //设置默认图片
     viewController.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //设置tabBarItem图片的位置
+    //设置tabBarItem图片的位置   上 左 下 右
     viewController.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, -12, 0);
     viewController.tabBarController.view.backgroundColor = [UIColor blueColor];
 }

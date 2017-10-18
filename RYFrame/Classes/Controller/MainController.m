@@ -20,18 +20,18 @@
     [super viewDidLoad];
     NSLog(@"%@",NSHomeDirectory());
     NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-//    NSLog(@"%@",documentsDirectoryURL);
+    NSLog(@"%@",documentsDirectoryURL);
     [MainRequest mainRequestWithURL:MainURL withResponse:^(id response) {
 //        NSLog(@"%@",response);
     }];
-    NSLog(@"%d",TABBARHEIGTH);
+    NSLog(@"%f",TABBARHEIGTH);
     if (iPHONE_X) {
         NSLog(@"是iPhone x");
     }else{
         NSLog(@"不是iPhone x");
     }
     
-    
+    NSLog(@"000000------%f", 100 - TABBARHEIGTH);
 }
 - (void)getWorkingProgress:(NSProgress *)progress{
     NSLog(@"%@",progress);

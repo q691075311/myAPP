@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0957F5DCF39864B96A332CFB /* libPods-RYFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6821847C4CADD16DD2F5C70C /* libPods-RYFrame.a */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
+		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
 		4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */; };
 		4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF11F67AFF300A9918F /* RYNavBar.m */; };
 		4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */; };
@@ -39,6 +40,8 @@
 		4B01BEA91F62696F00DA390C /* RYPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYPublic.h; sourceTree = "<group>"; };
 		4B1449131F662F5B000F544A /* RYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYTool.h; sourceTree = "<group>"; };
 		4B1449141F662F5B000F544A /* RYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYTool.m; sourceTree = "<group>"; };
+		4B39092A1F96F61400B04FFE /* TabbarPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarPlayView.h; sourceTree = "<group>"; };
+		4B39092B1F96F61400B04FFE /* TabbarPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarPlayView.m; sourceTree = "<group>"; };
 		4B5F1AED1F67AFB400A9918F /* UIColor+RY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RY.h"; sourceTree = "<group>"; };
 		4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RY.m"; sourceTree = "<group>"; };
 		4B5F1AF01F67AFF300A9918F /* RYNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYNavBar.h; sourceTree = "<group>"; };
@@ -105,6 +108,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B3909291F96F5CE00B04FFE /* 播放VIew */ = {
+			isa = PBXGroup;
+			children = (
+				4B39092A1F96F61400B04FFE /* TabbarPlayView.h */,
+				4B39092B1F96F61400B04FFE /* TabbarPlayView.m */,
+			);
+			path = "播放VIew";
+			sourceTree = "<group>";
+		};
 		4B5F4E4A1F9485C50020D642 /* MainRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +169,7 @@
 		4B5F4E561F948D650020D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B3909291F96F5CE00B04FFE /* 播放VIew */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +479,7 @@
 				4BF6577A1F95D3C700E8ECD6 /* FindController.m in Sources */,
 				4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */,
 				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
+				4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,
