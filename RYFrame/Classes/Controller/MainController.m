@@ -8,7 +8,8 @@
 
 #import "MainController.h"
 #import "MainRequest.h"
-
+#import "TabbarPlayView.h"
+#import "TestController.h"
 @interface MainController ()<RYBaseRequestDelegate>
 @property (nonatomic,strong) NSURLSessionDownloadTask * downTask;
 
@@ -32,6 +33,15 @@
     }
     
     NSLog(@"000000------%f", 100 - TABBARHEIGTH);
+}
+- (IBAction)changeImage:(UIButton *)sender {
+//    TabbarPlayView * view = [TabbarPlayView sharePlayView];
+//    view.playBtn.hidden = YES;
+    UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TestController * vc = [story instantiateViewControllerWithIdentifier:@"TestController"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 - (void)getWorkingProgress:(NSProgress *)progress{
     NSLog(@"%@",progress);

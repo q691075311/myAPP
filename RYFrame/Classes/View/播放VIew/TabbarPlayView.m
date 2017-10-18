@@ -8,6 +8,7 @@
 
 #import "TabbarPlayView.h"
 #define VIEWWIDTHORHEIGTH 65
+#define ALBUMWIGTH 45
 @implementation TabbarPlayView
 static TabbarPlayView * playView = nil;
 /*
@@ -61,20 +62,40 @@ static TabbarPlayView * playView = nil;
     UIImageView * imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"playViewBG"]];
     imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addSubview:imageView];
-    //添加阴影背景图
-    UIImageView * shadowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"playshadow"]];
-    shadowImage.center = CGPointMake(self.frame.size.width/2, 32);
-    shadowImage.bounds = CGRectMake(0, 0, 75, 65);
-    [self addSubview:shadowImage];
     //添加圆形背景图
     UIImageView * yuanImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"playyuan"]];
     yuanImage.center = CGPointMake(self.frame.size.width/2, 32.5);
     yuanImage.bounds = CGRectMake(0, 0, 50, 50);
     [self addSubview:yuanImage];
-    //添加专辑图
-    UIImageView * albumImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
-    
-    
+    [self setAlbumImage];
+    [self addPlayButton];
 }
+#pragma mark -- 添加专辑图
+- (void)setAlbumImage{
+    _albumImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testimage"]];
+    _albumImageView.center = CGPointMake(self.frame.size.width/2, 32.5);
+    _albumImageView.bounds = CGRectMake(0, 0, ALBUMWIGTH, ALBUMWIGTH);
+    _albumImageView.layer.masksToBounds = YES;
+    _albumImageView.layer.cornerRadius = ALBUMWIGTH/2;
+    [self addSubview:_albumImageView];
+}
+#pragma mark -- 添加播放按钮
+- (void)addPlayButton{
+    _playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _playBtn.center = CGPointMake(self.frame.size.width/2, 32.5);
+    _playBtn.bounds = CGRectMake(0, 0, ALBUMWIGTH, ALBUMWIGTH);
+    [_playBtn setBackgroundImage:[UIImage imageNamed:@"tabbarplay"] forState:UIControlStateNormal];
+    _playBtn.layer.masksToBounds = YES;
+    _playBtn.layer.cornerRadius = ALBUMWIGTH/2;
+    [_playBtn addTarget:self action:@selector(clickPlayBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_playBtn];
+}
+#pragma mark -- 点击播放按钮
+- (void)clickPlayBtn{
+    if (_delegate && [_delegate respondsToSelector:@selector(touchPlayBtn)]) {
+        [_delegate touchPlayBtn];
+    }
+}
+
 
 @end

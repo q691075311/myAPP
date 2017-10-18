@@ -12,7 +12,8 @@
 #import "FindController.h"
 #import "LoginController.h"
 #import "TabbarPlayView.h"
-@interface TabBarController ()
+#import "TestController.h"
+@interface TabBarController ()<TabbarPlayViewDelegate>
 
 @end
 
@@ -36,6 +37,7 @@
 #pragma mark -- 添加tabbar的播放View
 - (void)addTabbarPlayView{
     TabbarPlayView * playView = [TabbarPlayView sharePlayView];
+    playView.delegate = self;
     [playView show];
 }
 #pragma mark -- 配置tabbar
@@ -65,9 +67,9 @@
     //创建空白选视图
     MeListenController * meListenVC1 = [meListen instantiateViewControllerWithIdentifier:@"MeListenController"];
     UINavigationController * meListenNav1 = [[UINavigationController alloc] initWithRootViewController:meListenVC1];
-    [self setTabBarItemPropertyWithController:meListenVC1
-                                    withImage:nil
-                            withSelecterImage:nil];
+    meListenVC1.tabBarItem.image = [[UIImage imageNamed:@"playshadow"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //设置播放图片阴影的位置
+    meListenVC1.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
     
     //创建发现的视图
     FindController * findVC = [find instantiateViewControllerWithIdentifier:@"FindController"];
@@ -98,9 +100,17 @@
     //设置默认图片
     viewController.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //设置tabBarItem图片的位置   上 左 下 右
-    viewController.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, -12, 0);
-    viewController.tabBarController.view.backgroundColor = [UIColor blueColor];
+    viewController.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
 }
+#pragma mark -- TabbarPlayViewDelegate 点击播放按钮的代理
+- (void)touchPlayBtn{
+    [[TabbarPlayView sharePlayView] hidden];
+    TestController * test = [[TestController alloc] init];
+    [self presentViewController:test animated:YES completion:^{
+        
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
