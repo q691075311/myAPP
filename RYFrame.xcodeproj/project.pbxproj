@@ -17,6 +17,7 @@
 		4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E4C1F9485E70020D642 /* MainRequest.m */; };
 		4B5F4E591F948D890020D642 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E581F948D890020D642 /* MainModel.m */; };
 		4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E5C1F94930C0020D642 /* LaunchController.m */; };
+		4B90C6671F9841F400E3CEC9 /* IdleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90C6661F9841F400E3CEC9 /* IdleController.m */; };
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
@@ -56,6 +57,8 @@
 		4B5F4E581F948D890020D642 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		4B5F4E5B1F94930C0020D642 /* LaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchController.h; sourceTree = "<group>"; };
 		4B5F4E5C1F94930C0020D642 /* LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchController.m; sourceTree = "<group>"; };
+		4B90C6651F9841F400E3CEC9 /* IdleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdleController.h; sourceTree = "<group>"; };
+		4B90C6661F9841F400E3CEC9 /* IdleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdleController.m; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 			children = (
 				4BF657751F95D3B300E8ECD6 /* MeListenController.h */,
 				4BF657761F95D3B300E8ECD6 /* MeListenController.m */,
+				4B90C6651F9841F400E3CEC9 /* IdleController.h */,
+				4B90C6661F9841F400E3CEC9 /* IdleController.m */,
 			);
 			path = "我听";
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */,
 				4BB9639E1F95B59D003E5814 /* TabBarController.m in Sources */,
 				4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */,
+				4B90C6671F9841F400E3CEC9 /* IdleController.m in Sources */,
 				4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */,
 				4B5F4E591F948D890020D642 /* MainModel.m in Sources */,
 				4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */,

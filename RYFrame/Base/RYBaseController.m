@@ -8,11 +8,16 @@
 
 #import "RYBaseController.h"
 
+@interface RYBaseController ()<RYNavBarDelegate>
+
+@end
+
 @implementation RYBaseController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.navBar = [[RYNavBar alloc] initWithFrame:CGRectMake(0, TOPBAR_HEIGHT, SCREEN_WIDTH, 44)];
+    self.navBar.delegate = self;
     [self.view addSubview:self.navBar];
 }
 #pragma mark -- 设置状态栏的颜色
@@ -21,6 +26,19 @@
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         statusBar.backgroundColor = color;
     }
+}
+#pragma mark -- RYNavBarDelegate
+//点击邮箱
+- (void)touchEmail{
+    NSLog(@"touchEmail");
+}
+//点击历史
+- (void)touchHistoy{
+    NSLog(@"touchHistoy");
+}
+//点击下载
+- (void)touchDownLoad{
+    NSLog(@"touchDownLoad");
 }
 
 @end

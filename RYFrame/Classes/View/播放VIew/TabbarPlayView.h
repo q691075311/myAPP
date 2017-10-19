@@ -60,7 +60,7 @@
 
  @param albumImage 专辑图片
  */
-- (void)setAlbumImage:(UIImage *)albumImage;
+- (void)setAlbumImage;
 
 
 @end

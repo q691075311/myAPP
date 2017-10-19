@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navBar configNavbarWithTitle:@"发现" withType:(NavBarType_Normal)];
+    self.navBar.isShowLineView = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

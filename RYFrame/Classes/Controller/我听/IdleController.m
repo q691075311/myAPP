@@ -1,25 +1,22 @@
 //
-//  MeListenController.m
+//  IdleController.m
 //  RYFrame
 //
-//  Created by 陶博 on 2017/10/17.
+//  Created by 陶博 on 2017/10/19.
 //  Copyright © 2017年 rongyun. All rights reserved.
 //
 
-#import "MeListenController.h"
+#import "IdleController.h"
 
-@interface MeListenController ()
+@interface IdleController ()
 
 @end
 
-@implementation MeListenController
+@implementation IdleController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"-----%d",self.navBar.hidden);
-    [self.navBar configNavbarWithTitle:@"我听" withType:NavBarType_Normal];
-    self.navBar.isShowLineView = YES;
 }
 
 - (void)didReceiveMemoryWarning {

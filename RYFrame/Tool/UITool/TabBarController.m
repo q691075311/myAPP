@@ -12,6 +12,7 @@
 #import "FindController.h"
 #import "LoginController.h"
 #import "TabbarPlayView.h"
+#import "IdleController.h"
 #import "TestController.h"
 @interface TabBarController ()<TabbarPlayViewDelegate>
 
@@ -65,11 +66,11 @@
                             withSelecterImage:[UIImage imageNamed:@"melistenselect"]];
     
     //创建空白选视图
-    MeListenController * meListenVC1 = [meListen instantiateViewControllerWithIdentifier:@"MeListenController"];
-    UINavigationController * meListenNav1 = [[UINavigationController alloc] initWithRootViewController:meListenVC1];
-    meListenVC1.tabBarItem.image = [[UIImage imageNamed:@"playshadow"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    IdleController * IdleVC = [meListen instantiateViewControllerWithIdentifier:@"IdleController"];
+    UINavigationController * IdleNav = [[UINavigationController alloc] initWithRootViewController:IdleVC];
+    IdleVC.tabBarItem.image = [[UIImage imageNamed:@"playshadow"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //设置播放图片阴影的位置
-    meListenVC1.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
+    IdleVC.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
     
     //创建发现的视图
     FindController * findVC = [find instantiateViewControllerWithIdentifier:@"FindController"];
@@ -84,14 +85,19 @@
     [self setTabBarItemPropertyWithController:loginVC
                                     withImage:[UIImage imageNamed:@"Login"]
                             withSelecterImage:[UIImage imageNamed:@"Loginselect"]];
+    //隐藏系统导航栏
+    mainNav.navigationBarHidden = YES;
+    meListenNav.navigationBarHidden = YES;
+    IdleNav.navigationBarHidden = YES;
+    findNav.navigationBarHidden = YES;
+    loginNav.navigationBarHidden = YES;
     //添加控制器
     [self addChildViewController:mainNav];
     [self addChildViewController:meListenNav];
-    [self addChildViewController:meListenNav1];
+    [self addChildViewController:IdleNav];
     [self addChildViewController:findNav];
     [self addChildViewController:loginNav];
     window.rootViewController = self;
-    
 }
 #pragma mark -- 配置图片
 - (void)setTabBarItemPropertyWithController:(UIViewController *)viewController withImage:(UIImage *)image withSelecterImage:(UIImage *)selecterImage{
@@ -110,7 +116,6 @@
         
     }];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
