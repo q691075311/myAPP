@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0957F5DCF39864B96A332CFB /* libPods-RYFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6821847C4CADD16DD2F5C70C /* libPods-RYFrame.a */; };
+		4B0152851F989530003300DF /* MainTopChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0152841F989530003300DF /* MainTopChooseView.m */; };
 		4B1010B21F974D0B001401E0 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1010B11F974D0B001401E0 /* TestController.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0152831F989530003300DF /* MainTopChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTopChooseView.h; sourceTree = "<group>"; };
+		4B0152841F989530003300DF /* MainTopChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTopChooseView.m; sourceTree = "<group>"; };
 		4B01BEA81F6266CF00DA390C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4B01BEA91F62696F00DA390C /* RYPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYPublic.h; sourceTree = "<group>"; };
 		4B1010B01F974D0B001401E0 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
@@ -114,6 +117,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B0152821F9894E0003300DF /* 首页View */ = {
+			isa = PBXGroup;
+			children = (
+				4B0152831F989530003300DF /* MainTopChooseView.h */,
+				4B0152841F989530003300DF /* MainTopChooseView.m */,
+			);
+			path = "首页View";
+			sourceTree = "<group>";
+		};
 		4B3909291F96F5CE00B04FFE /* 播放VIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +189,7 @@
 		4B5F4E561F948D650020D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B0152821F9894E0003300DF /* 首页View */,
 				4B3909291F96F5CE00B04FFE /* 播放VIew */,
 			);
 			path = View;
@@ -494,6 +507,7 @@
 				4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
+				4B0152851F989530003300DF /* MainTopChooseView.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
