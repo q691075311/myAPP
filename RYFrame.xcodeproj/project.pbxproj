@@ -19,6 +19,10 @@
 		4B5F4E591F948D890020D642 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E581F948D890020D642 /* MainModel.m */; };
 		4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E5C1F94930C0020D642 /* LaunchController.m */; };
 		4B90C6671F9841F400E3CEC9 /* IdleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90C6661F9841F400E3CEC9 /* IdleController.m */; };
+		4B9C5AE11F99D1E400F6DDDE /* HotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE01F99D1E400F6DDDE /* HotController.m */; };
+		4B9C5AE41F99D24C00F6DDDE /* SubClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE31F99D24C00F6DDDE /* SubClassController.m */; };
+		4B9C5AE71F99D29900F6DDDE /* FineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE61F99D29900F6DDDE /* FineController.m */; };
+		4B9C5AEA1F99D94E00F6DDDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */; };
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
@@ -62,6 +66,14 @@
 		4B5F4E5C1F94930C0020D642 /* LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchController.m; sourceTree = "<group>"; };
 		4B90C6651F9841F400E3CEC9 /* IdleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdleController.h; sourceTree = "<group>"; };
 		4B90C6661F9841F400E3CEC9 /* IdleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdleController.m; sourceTree = "<group>"; };
+		4B9C5ADF1F99D1E400F6DDDE /* HotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotController.h; sourceTree = "<group>"; };
+		4B9C5AE01F99D1E400F6DDDE /* HotController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotController.m; sourceTree = "<group>"; };
+		4B9C5AE21F99D24C00F6DDDE /* SubClassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubClassController.h; sourceTree = "<group>"; };
+		4B9C5AE31F99D24C00F6DDDE /* SubClassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubClassController.m; sourceTree = "<group>"; };
+		4B9C5AE51F99D29900F6DDDE /* FineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FineController.h; sourceTree = "<group>"; };
+		4B9C5AE61F99D29900F6DDDE /* FineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FineController.m; sourceTree = "<group>"; };
+		4B9C5AE81F99D94E00F6DDDE /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -205,6 +217,12 @@
 		4B9C5ADE1F99D15D00F6DDDE /* 首页子视图 */ = {
 			isa = PBXGroup;
 			children = (
+				4B9C5ADF1F99D1E400F6DDDE /* HotController.h */,
+				4B9C5AE01F99D1E400F6DDDE /* HotController.m */,
+				4B9C5AE21F99D24C00F6DDDE /* SubClassController.h */,
+				4B9C5AE31F99D24C00F6DDDE /* SubClassController.m */,
+				4B9C5AE51F99D29900F6DDDE /* FineController.h */,
+				4B9C5AE61F99D29900F6DDDE /* FineController.m */,
 			);
 			path = "首页子视图";
 			sourceTree = "<group>";
@@ -212,9 +230,9 @@
 		4BB963A51F95CB21003E5814 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				4B9C5ADE1F99D15D00F6DDDE /* 首页子视图 */,
 				4BE9B7021F67842B00DBFF67 /* MainController.h */,
 				4BE9B7031F67842B00DBFF67 /* MainController.m */,
+				4B9C5ADE1F99D15D00F6DDDE /* 首页子视图 */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -253,6 +271,8 @@
 			children = (
 				4B5F1AED1F67AFB400A9918F /* UIColor+RY.h */,
 				4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */,
+				4B9C5AE81F99D94E00F6DDDE /* UIView+Frame.h */,
+				4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */,
 				4B5F1AF01F67AFF300A9918F /* RYNavBar.h */,
 				4B5F1AF11F67AFF300A9918F /* RYNavBar.m */,
 				4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */,
@@ -497,7 +517,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9C5AEA1F99D94E00F6DDDE /* UIView+Frame.m in Sources */,
 				4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */,
+				4B9C5AE41F99D24C00F6DDDE /* SubClassController.m in Sources */,
 				4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */,
 				4BB9639E1F95B59D003E5814 /* TabBarController.m in Sources */,
 				4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */,
@@ -512,8 +534,10 @@
 				4BF6577A1F95D3C700E8ECD6 /* FindController.m in Sources */,
 				4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */,
 				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
+				4B9C5AE71F99D29900F6DDDE /* FineController.m in Sources */,
 				4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
+				4B9C5AE11F99D1E400F6DDDE /* HotController.m in Sources */,
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
 				4B0152851F989530003300DF /* MainTopChooseView.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,

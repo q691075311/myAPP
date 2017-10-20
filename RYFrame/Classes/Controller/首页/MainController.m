@@ -8,14 +8,12 @@
 
 #import "MainController.h"
 #import "MainRequest.h"
-#import "TabbarPlayView.h"
-#import "TabBarController.h"
-#import "LoginController.h"
 #import "MainTopChooseView.h"
-#import "TestController.h"
+
 @interface MainController ()<RYBaseRequestDelegate>
 @property (nonatomic,strong) NSURLSessionDownloadTask * downTask;
 @property (nonatomic,strong) MainTopChooseView * topItemView;
+@property (nonatomic,strong) UIScrollView * contentScrollView;
 @end
 
 @implementation MainController
@@ -32,9 +30,21 @@
     _topItemView = [[MainTopChooseView alloc] initWithFrame:CGRectMake(0, TOPBAR_HEIGHT + 44, SCREEN_WIDTH, 43)];
     [self.view addSubview:_topItemView];
 }
+#pragma mark -- 初始化contentScrollView
+- (UIScrollView *)contentScrollView{
+    if (!_contentScrollView) {
+        _contentScrollView = [[UIScrollView alloc] init];
+    }
+    return _contentScrollView;
+}
+- (void)initScrollView{
+    self.contentScrollView.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+}
+
+
 - (IBAction)changeImage:(UIButton *)sender {
-    UIButton * btn = [_topItemView viewWithTag:3];
-    [_topItemView btnClick:btn];
+//    UIButton * btn = [_topItemView viewWithTag:3];
+//    [_topItemView btnClick:btn];
 }
 - (void)getWorkingProgress:(NSProgress *)progress{
     NSLog(@"%@",progress);
