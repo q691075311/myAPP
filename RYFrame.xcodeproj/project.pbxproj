@@ -165,8 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				4BB963A51F95CB21003E5814 /* 首页 */,
-				4BE9B7021F67842B00DBFF67 /* MainController.h */,
-				4BE9B7031F67842B00DBFF67 /* MainController.m */,
 				4B1010B01F974D0B001401E0 /* TestController.h */,
 				4B1010B11F974D0B001401E0 /* TestController.m */,
 				4BB963A61F95CB30003E5814 /* 我听 */,
@@ -204,9 +202,19 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		4B9C5ADE1F99D15D00F6DDDE /* 首页子视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "首页子视图";
+			sourceTree = "<group>";
+		};
 		4BB963A51F95CB21003E5814 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				4B9C5ADE1F99D15D00F6DDDE /* 首页子视图 */,
+				4BE9B7021F67842B00DBFF67 /* MainController.h */,
+				4BE9B7031F67842B00DBFF67 /* MainController.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
