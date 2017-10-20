@@ -25,6 +25,7 @@
 #import "RYTool.h"
 #import "RYPublic.h"
 #import "UIColor+RY.h"
+#import "UIView+Frame.h"
 #import "AFNetworking.h"
 #import "RYBaseRequest.h"
 #import "SVProgressHUD.h"

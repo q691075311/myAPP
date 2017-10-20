@@ -8,7 +8,25 @@
 
 #import "RYBaseController.h"
 #import "RYNavBar.h"
+#import "HotController.h"
+#import "SubClassController.h"
+#import "FineController.h"
 @interface MainController : RYBaseController
+
+/**
+ 热门控制器
+ */
+@property (nonatomic,strong) HotController * hotController;
+
+/**
+ 分类控制器
+ */
+@property (nonatomic,strong) SubClassController * subClassController;
+
+/**
+ 精品控制器
+ */
+@property (nonatomic,strong) FineController * fineController;
 /**
  导航栏View
  */

@@ -13,9 +13,13 @@
 - (CGFloat)width{
     return self.bounds.size.width;
 }
-
 - (CGFloat)hiegth{
     return self.bounds.size.height;
 }
-
+- (NSUInteger)origin_X{
+    return self.frame.origin.x;
+}
+- (NSUInteger)origin_Y{
+    return self.frame.origin.y;
+}
 @end

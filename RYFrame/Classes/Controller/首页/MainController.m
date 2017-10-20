@@ -10,6 +10,7 @@
 #import "MainRequest.h"
 #import "MainTopChooseView.h"
 
+
 @interface MainController ()<RYBaseRequestDelegate>
 @property (nonatomic,strong) NSURLSessionDownloadTask * downTask;
 @property (nonatomic,strong) MainTopChooseView * topItemView;
@@ -20,10 +21,27 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSLog(@"%@",NSHomeDirectory());
+    NSLog(@"----%f",SCREEN_HEIGHT - 49 - TOPBAR_HEIGHT - 44 - (TABBARHEIGTH));    NSLog(@"%@",NSHomeDirectory());
     [self.navBar configNavbarWithTitle:nil withType:NavBarType_Main];
     self.navBar.isShowLineView = YES;
     [self addTopItemView];
+    [self initScrollView];
+    [self createSubViweController];
+}
+- (void)createSubViweController{
+    UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _hotController = [story instantiateViewControllerWithIdentifier:@"HotController"];
+    _subClassController = [story instantiateViewControllerWithIdentifier:@"SubClassController"];
+    _fineController = [story instantiateViewControllerWithIdentifier:@"FineController"];
+    [self addChildViewController:_hotController];
+    [self addChildViewController:_subClassController];
+    [self addChildViewController:_fineController];
+    _hotController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    _subClassController.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    _fineController.view.frame = CGRectMake(SCREEN_WIDTH * 2, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    [_contentScrollView addSubview:_hotController.view];
+    [_contentScrollView addSubview:_subClassController.view];
+    [_contentScrollView addSubview:_fineController.view];
 }
 #pragma mark -- 添加顶部itemView
 - (void)addTopItemView{
@@ -37,8 +55,13 @@
     }
     return _contentScrollView;
 }
+#pragma mark -- 加载ScrollView
 - (void)initScrollView{
-    self.contentScrollView.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    CGFloat hiegth = SCREEN_HEIGHT - 49 - TOPBAR_HEIGHT - 44 - (TABBARHEIGTH) - _topItemView.hiegth;//49是tabbar高度，44是导航栏高度，
+    self.contentScrollView.frame = CGRectMake(0, _topItemView.origin_Y+_topItemView.hiegth, SCREEN_WIDTH, hiegth);
+    self.contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * MainTopItem.count, self.contentScrollView.hiegth);
+    self.contentScrollView.pagingEnabled = YES;
+    [self.view addSubview:self.contentScrollView];
 }
 
 
