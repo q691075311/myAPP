@@ -31,18 +31,30 @@
 #pragma mark -- 添加子视图到首页Controller
 - (void)createSubViweController{
     UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //创建各种Controller
     _hotController = [story instantiateViewControllerWithIdentifier:@"HotController"];
     _subClassController = [story instantiateViewControllerWithIdentifier:@"SubClassController"];
     _fineController = [story instantiateViewControllerWithIdentifier:@"FineController"];
-    [self addChildViewController:_hotController];
-    [self addChildViewController:_subClassController];
-    [self addChildViewController:_fineController];
+    _liveController = [story instantiateViewControllerWithIdentifier:@"LiveController"];
+    _broadcastController = [story instantiateViewControllerWithIdentifier:@"BroadcastController"];
+    //初始化View的frame
     _hotController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
     _subClassController.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
     _fineController.view.frame = CGRectMake(SCREEN_WIDTH * 2, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    _liveController.view.frame = CGRectMake(SCREEN_WIDTH * 3, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    _broadcastController.view.frame = CGRectMake(SCREEN_WIDTH * 4, 0, SCREEN_WIDTH, _contentScrollView.hiegth);
+    //添加子控制器
+    [self addChildViewController:_hotController];
+    [self addChildViewController:_subClassController];
+    [self addChildViewController:_fineController];
+    [self addChildViewController:_liveController];
+    [self addChildViewController:_broadcastController];
+    //添加View
     [_contentScrollView addSubview:_hotController.view];
     [_contentScrollView addSubview:_subClassController.view];
     [_contentScrollView addSubview:_fineController.view];
+    [_contentScrollView addSubview:_liveController.view];
+    [_contentScrollView addSubview:_broadcastController.view];
 }
 #pragma mark -- 添加顶部itemView
 - (void)addTopItemView{
@@ -75,6 +87,7 @@
     UIButton * btn = [_topItemView viewWithTag:tag];
     [_topItemView btnClick:btn];
 }
+
 #pragma mark -- MainTopChooseViewDelegate
 - (void)touchBtn:(UIButton *)btn{
     [self.contentScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (btn.tag - 100), 0) animated:YES];

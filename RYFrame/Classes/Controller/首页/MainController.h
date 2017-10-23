@@ -11,6 +11,8 @@
 #import "HotController.h"
 #import "SubClassController.h"
 #import "FineController.h"
+#import "LiveController.h"
+#import "BroadcastController.h"
 @interface MainController : RYBaseController
 
 /**
@@ -27,6 +29,17 @@
  精品控制器
  */
 @property (nonatomic,strong) FineController * fineController;
+
+/**
+ 直播控制器
+ */
+@property (nonatomic,strong) LiveController * liveController;
+
+/**
+ 广播控制器
+ */
+@property (nonatomic,strong) BroadcastController * broadcastController;
+
 /**
  导航栏View
  */

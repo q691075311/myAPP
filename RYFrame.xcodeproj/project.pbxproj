@@ -11,6 +11,8 @@
 		4B0152851F989530003300DF /* MainTopChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0152841F989530003300DF /* MainTopChooseView.m */; };
 		4B1010B21F974D0B001401E0 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1010B11F974D0B001401E0 /* TestController.m */; };
 		4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126211F9DB9F9001BD95B /* RYImageView.m */; };
+		4B1126251F9DD67C001BD95B /* LiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126241F9DD67C001BD95B /* LiveController.m */; };
+		4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126271F9DD6C7001BD95B /* BroadcastController.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
 		4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */; };
@@ -52,6 +54,10 @@
 		4B1010B11F974D0B001401E0 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		4B1126201F9DB9F9001BD95B /* RYImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYImageView.h; sourceTree = "<group>"; };
 		4B1126211F9DB9F9001BD95B /* RYImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYImageView.m; sourceTree = "<group>"; };
+		4B1126231F9DD67C001BD95B /* LiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveController.h; sourceTree = "<group>"; };
+		4B1126241F9DD67C001BD95B /* LiveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveController.m; sourceTree = "<group>"; };
+		4B1126261F9DD6C7001BD95B /* BroadcastController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BroadcastController.h; sourceTree = "<group>"; };
+		4B1126271F9DD6C7001BD95B /* BroadcastController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastController.m; sourceTree = "<group>"; };
 		4B1449131F662F5B000F544A /* RYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYTool.h; sourceTree = "<group>"; };
 		4B1449141F662F5B000F544A /* RYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYTool.m; sourceTree = "<group>"; };
 		4B39092A1F96F61400B04FFE /* TabbarPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarPlayView.h; sourceTree = "<group>"; };
@@ -226,6 +232,10 @@
 				4B9C5AE31F99D24C00F6DDDE /* SubClassController.m */,
 				4B9C5AE51F99D29900F6DDDE /* FineController.h */,
 				4B9C5AE61F99D29900F6DDDE /* FineController.m */,
+				4B1126231F9DD67C001BD95B /* LiveController.h */,
+				4B1126241F9DD67C001BD95B /* LiveController.m */,
+				4B1126261F9DD6C7001BD95B /* BroadcastController.h */,
+				4B1126271F9DD6C7001BD95B /* BroadcastController.m */,
 			);
 			path = "首页子视图";
 			sourceTree = "<group>";
@@ -541,12 +551,14 @@
 				4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */,
 				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
 				4B9C5AE71F99D29900F6DDDE /* FineController.m in Sources */,
+				4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */,
 				4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
 				4B9C5AE11F99D1E400F6DDDE /* HotController.m in Sources */,
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
 				4B0152851F989530003300DF /* MainTopChooseView.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,
+				4B1126251F9DD67C001BD95B /* LiveController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

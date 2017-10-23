@@ -23,12 +23,18 @@
     [self.navBar removeFromSuperview];
     self.view.backgroundColor = [UIColor redColor];
     
-    
-    
 }
 - (IBAction)animtion:(UIButton *)sender {
     TabbarPlayView * playView = [TabbarPlayView sharePlayView];
     [playView.albumImageView startRotating];
+}
+- (IBAction)stop:(UIButton *)sender {
+    TabbarPlayView * playView = [TabbarPlayView sharePlayView];
+    [playView.albumImageView stopRotating];
+}
+- (IBAction)huifu:(UIButton *)sender {
+    TabbarPlayView * playView = [TabbarPlayView sharePlayView];
+    [playView.albumImageView resumeRotate];
 }
 
 - (void)didReceiveMemoryWarning {
