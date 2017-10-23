@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RYImageView.h"
 
 @protocol TabbarPlayViewDelegate <NSObject>
 
@@ -24,7 +25,7 @@
 /**
  专辑图片
  */
-@property (nonatomic,strong) UIImageView * albumImageView;
+@property (nonatomic,strong) RYImageView * albumImageView;
 
 /**
  TabbarPlayView的代理

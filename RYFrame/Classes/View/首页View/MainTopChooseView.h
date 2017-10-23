@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MainTopChooseViewDelegate <NSObject>
+
+- (void)touchBtn:(UIButton *)btn;
+
+@end
+
 @interface MainTopChooseView : UIView
 
 /**
@@ -19,6 +25,9 @@
  点击的上一个Btn
  */
 @property (nonatomic,strong) UIButton * lastBtn;
+
+@property (nonatomic,assign) id <MainTopChooseViewDelegate> delegate;
+
 /**
  初始化View
 
@@ -27,5 +36,11 @@
  @return View
  */
 - (instancetype)initWithFrame:(CGRect)frame;
+
+/**
+ Btn的点击事件
+
+ @param btn
+ */
 - (void)btnClick:(UIButton *)btn;
 @end

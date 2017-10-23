@@ -11,7 +11,7 @@
 #import "MainTopChooseView.h"
 
 
-@interface MainController ()<RYBaseRequestDelegate>
+@interface MainController ()<RYBaseRequestDelegate,UIScrollViewDelegate,MainTopChooseViewDelegate>
 @property (nonatomic,strong) NSURLSessionDownloadTask * downTask;
 @property (nonatomic,strong) MainTopChooseView * topItemView;
 @property (nonatomic,strong) UIScrollView * contentScrollView;
@@ -21,13 +21,14 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSLog(@"----%f",SCREEN_HEIGHT - 49 - TOPBAR_HEIGHT - 44 - (TABBARHEIGTH));    NSLog(@"%@",NSHomeDirectory());
+    NSLog(@"%@",NSHomeDirectory());
     [self.navBar configNavbarWithTitle:nil withType:NavBarType_Main];
     self.navBar.isShowLineView = YES;
     [self addTopItemView];
     [self initScrollView];
     [self createSubViweController];
 }
+#pragma mark -- 添加子视图到首页Controller
 - (void)createSubViweController{
     UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     _hotController = [story instantiateViewControllerWithIdentifier:@"HotController"];
@@ -46,6 +47,7 @@
 #pragma mark -- 添加顶部itemView
 - (void)addTopItemView{
     _topItemView = [[MainTopChooseView alloc] initWithFrame:CGRectMake(0, TOPBAR_HEIGHT + 44, SCREEN_WIDTH, 43)];
+    _topItemView.delegate = self;
     [self.view addSubview:_topItemView];
 }
 #pragma mark -- 初始化contentScrollView
@@ -61,14 +63,23 @@
     self.contentScrollView.frame = CGRectMake(0, _topItemView.origin_Y+_topItemView.hiegth, SCREEN_WIDTH, hiegth);
     self.contentScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * MainTopItem.count, self.contentScrollView.hiegth);
     self.contentScrollView.pagingEnabled = YES;
+    self.contentScrollView.delegate = self;
     [self.view addSubview:self.contentScrollView];
 }
-
-
-- (IBAction)changeImage:(UIButton *)sender {
-//    UIButton * btn = [_topItemView viewWithTag:3];
-//    [_topItemView btnClick:btn];
+#pragma mark -- UIScrollViewDelegate ScrollView减速完成时调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self topViewAnimationsWithTag:(scrollView.contentOffset.x/SCREEN_WIDTH) + 100];
 }
+#pragma mark -- 改变topView的动画
+- (void)topViewAnimationsWithTag:(NSInteger)tag{
+    UIButton * btn = [_topItemView viewWithTag:tag];
+    [_topItemView btnClick:btn];
+}
+#pragma mark -- MainTopChooseViewDelegate
+- (void)touchBtn:(UIButton *)btn{
+    [self.contentScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (btn.tag - 100), 0) animated:YES];
+}
+
 - (void)getWorkingProgress:(NSProgress *)progress{
     NSLog(@"%@",progress);
 }

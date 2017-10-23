@@ -10,6 +10,7 @@
 		0957F5DCF39864B96A332CFB /* libPods-RYFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6821847C4CADD16DD2F5C70C /* libPods-RYFrame.a */; };
 		4B0152851F989530003300DF /* MainTopChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0152841F989530003300DF /* MainTopChooseView.m */; };
 		4B1010B21F974D0B001401E0 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1010B11F974D0B001401E0 /* TestController.m */; };
+		4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126211F9DB9F9001BD95B /* RYImageView.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
 		4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */; };
@@ -49,6 +50,8 @@
 		4B01BEA91F62696F00DA390C /* RYPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYPublic.h; sourceTree = "<group>"; };
 		4B1010B01F974D0B001401E0 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		4B1010B11F974D0B001401E0 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
+		4B1126201F9DB9F9001BD95B /* RYImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYImageView.h; sourceTree = "<group>"; };
+		4B1126211F9DB9F9001BD95B /* RYImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYImageView.m; sourceTree = "<group>"; };
 		4B1449131F662F5B000F544A /* RYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYTool.h; sourceTree = "<group>"; };
 		4B1449141F662F5B000F544A /* RYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYTool.m; sourceTree = "<group>"; };
 		4B39092A1F96F61400B04FFE /* TabbarPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarPlayView.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */,
 				4B9C5AE81F99D94E00F6DDDE /* UIView+Frame.h */,
 				4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */,
+				4B1126201F9DB9F9001BD95B /* RYImageView.h */,
+				4B1126211F9DB9F9001BD95B /* RYImageView.m */,
 				4B5F1AF01F67AFF300A9918F /* RYNavBar.h */,
 				4B5F1AF11F67AFF300A9918F /* RYNavBar.m */,
 				4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */,
@@ -527,6 +532,7 @@
 				4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */,
 				4B5F4E591F948D890020D642 /* MainModel.m in Sources */,
 				4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */,
+				4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */,
 				4B1010B21F974D0B001401E0 /* TestController.m in Sources */,
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,

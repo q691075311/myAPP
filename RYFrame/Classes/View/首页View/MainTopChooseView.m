@@ -38,7 +38,7 @@
         btn.frame = CGRectMake(BntWidth * i, 0, BntWidth, BtnHeigth);
         [btn setTitleColor:i == 0 ? [UIColor colorWithRed:243/255.0 green:75/255.0 blue:51/255.0 alpha:1] : [UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitle:MainTopItem[i] forState:UIControlStateNormal];
-        btn.tag = i;
+        btn.tag = i + 100;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         //记录上个Btn
         if (i == 0) {
@@ -53,6 +53,9 @@
     [btn setTitleColor:[UIColor colorWithRed:243/255.0 green:75/255.0 blue:51/255.0 alpha:1] forState:UIControlStateNormal];
     _lastBtn = btn;
     [self changeRedLineViewFrameWithBtnTag:btn.tag];
+    if (_delegate && [_delegate respondsToSelector:@selector(touchBtn:)]) {
+        [_delegate touchBtn:btn];
+    }
 }
 #pragma mark -- 添加红色Viwe
 - (void)addRedLineView{
@@ -65,7 +68,7 @@
 #pragma mark -- redView做动画
 - (void)changeRedLineViewFrameWithBtnTag:(NSInteger)btnTag{
     [UIView animateWithDuration:0.2 animations:^{
-        _redLineView.center = CGPointMake(BntWidth/2 + BntWidth*btnTag, self.bounds.size.height - 1);
+        _redLineView.center = CGPointMake(BntWidth/2 + BntWidth*(btnTag - 100), self.bounds.size.height - 1);
     }];
 }
 

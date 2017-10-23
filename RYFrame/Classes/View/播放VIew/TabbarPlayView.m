@@ -72,7 +72,7 @@ static TabbarPlayView * playView = nil;
 }
 #pragma mark -- 添加专辑图
 - (void)setAlbumImage{
-    _albumImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testimage"]];
+    _albumImageView = [[RYImageView alloc] initWithImage:[UIImage imageNamed:@"testimage"]];
     _albumImageView.center = CGPointMake(self.frame.size.width/2, 32.5);
     _albumImageView.bounds = CGRectMake(0, 0, ALBUMWIGTH, ALBUMWIGTH);
     _albumImageView.layer.masksToBounds = YES;

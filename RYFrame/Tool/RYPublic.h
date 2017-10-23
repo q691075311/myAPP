@@ -20,6 +20,8 @@
 #define TOPBAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
 //获取iPhone X的tabbar高度
 #define TABBARHEIGTH iPHONE_X == NO ? 0 : 34
+//首页content高度
+#define MainContentHeigth SCREEN_HEIGHT - (TOPBAR_HEIGHT) - (TABBARHEIGTH) - 43 - 44 - 49
 //首页标题的数组
 #define MainTopItem @[@"热门",@"分类",@"精品",@"直播",@"广播"]
 
