@@ -15,11 +15,11 @@
 		4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126271F9DD6C7001BD95B /* BroadcastController.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
+		4B499C9F1F9F33A8003C1C48 /* MainData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA4A1F9F03B50010FFDC /* MainData.m */; };
 		4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */; };
 		4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF11F67AFF300A9918F /* RYNavBar.m */; };
 		4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */; };
 		4B5F4E4D1F9485E70020D642 /* MainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E4C1F9485E70020D642 /* MainRequest.m */; };
-		4B5F4E591F948D890020D642 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E581F948D890020D642 /* MainModel.m */; };
 		4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F4E5C1F94930C0020D642 /* LaunchController.m */; };
 		4B90C6671F9841F400E3CEC9 /* IdleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90C6661F9841F400E3CEC9 /* IdleController.m */; };
 		4B9C5AE11F99D1E400F6DDDE /* HotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE01F99D1E400F6DDDE /* HotController.m */; };
@@ -31,6 +31,12 @@
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
 		4BB9639E1F95B59D003E5814 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9639D1F95B59D003E5814 /* TabBarController.m */; };
 		4BB963A41F95CA8F003E5814 /* MeListen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB963A31F95CA8F003E5814 /* MeListen.storyboard */; };
+		4BBBF56E1F9F05EE005184B8 /* MainMainBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA501F9F03B50010FFDC /* MainMainBaseClass.m */; };
+		4BBBF56F1F9F0605005184B8 /* MainList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA541F9F03B60010FFDC /* MainList.m */; };
+		4BBBF5701F9F0615005184B8 /* MainKeywords.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA4C1F9F03B50010FFDC /* MainKeywords.m */; };
+		4BBBF5711F9F061A005184B8 /* MainTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA511F9F03B50010FFDC /* MainTarget.m */; };
+		4BBBF5721F9F0622005184B8 /* MainProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA4F1F9F03B50010FFDC /* MainProperties.m */; };
+		4BBBF5771F9F1FE2005184B8 /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF5761F9F1FE2005184B8 /* ADScrollView.m */; };
 		4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7001F676BE000DBFF67 /* RYBaseController.m */; };
 		4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7031F67842B00DBFF67 /* MainController.m */; };
 		4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657711F95D35200E8ECD6 /* Find.storyboard */; };
@@ -69,8 +75,6 @@
 		4B5F1AF31F67B00E00A9918F /* RYNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RYNavBar.xib; sourceTree = "<group>"; };
 		4B5F4E4B1F9485E70020D642 /* MainRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainRequest.h; sourceTree = "<group>"; };
 		4B5F4E4C1F9485E70020D642 /* MainRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainRequest.m; sourceTree = "<group>"; };
-		4B5F4E571F948D890020D642 /* MainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
-		4B5F4E581F948D890020D642 /* MainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		4B5F4E5B1F94930C0020D642 /* LaunchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchController.h; sourceTree = "<group>"; };
 		4B5F4E5C1F94930C0020D642 /* LaunchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchController.m; sourceTree = "<group>"; };
 		4B90C6651F9841F400E3CEC9 /* IdleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdleController.h; sourceTree = "<group>"; };
@@ -83,6 +87,19 @@
 		4B9C5AE61F99D29900F6DDDE /* FineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FineController.m; sourceTree = "<group>"; };
 		4B9C5AE81F99D94E00F6DDDE /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		4BA0CA491F9F03B50010FFDC /* DataModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		4BA0CA4A1F9F03B50010FFDC /* MainData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainData.m; sourceTree = "<group>"; };
+		4BA0CA4B1F9F03B50010FFDC /* MainKeywords.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainKeywords.h; sourceTree = "<group>"; };
+		4BA0CA4C1F9F03B50010FFDC /* MainKeywords.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainKeywords.m; sourceTree = "<group>"; };
+		4BA0CA4D1F9F03B50010FFDC /* MainData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainData.h; sourceTree = "<group>"; };
+		4BA0CA4E1F9F03B50010FFDC /* MainTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTarget.h; sourceTree = "<group>"; };
+		4BA0CA4F1F9F03B50010FFDC /* MainProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainProperties.m; sourceTree = "<group>"; };
+		4BA0CA501F9F03B50010FFDC /* MainMainBaseClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMainBaseClass.m; sourceTree = "<group>"; };
+		4BA0CA511F9F03B50010FFDC /* MainTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTarget.m; sourceTree = "<group>"; };
+		4BA0CA521F9F03B50010FFDC /* MainProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainProperties.h; sourceTree = "<group>"; };
+		4BA0CA531F9F03B50010FFDC /* MainList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainList.h; sourceTree = "<group>"; };
+		4BA0CA541F9F03B60010FFDC /* MainList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainList.m; sourceTree = "<group>"; };
+		4BA0CA551F9F03B60010FFDC /* MainMainBaseClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMainBaseClass.h; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -91,6 +108,8 @@
 		4BB9639C1F95B59D003E5814 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		4BB9639D1F95B59D003E5814 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		4BB963A31F95CA8F003E5814 /* MeListen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeListen.storyboard; sourceTree = "<group>"; };
+		4BBBF5751F9F1FE2005184B8 /* ADScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADScrollView.h; sourceTree = "<group>"; };
+		4BBBF5761F9F1FE2005184B8 /* ADScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADScrollView.m; sourceTree = "<group>"; };
 		4BE9B6FF1F676BE000DBFF67 /* RYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYBaseController.h; sourceTree = "<group>"; };
 		4BE9B7001F676BE000DBFF67 /* RYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseController.m; sourceTree = "<group>"; };
 		4BE9B7021F67842B00DBFF67 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
@@ -199,8 +218,7 @@
 		4B5F4E551F948D650020D642 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B5F4E571F948D890020D642 /* MainModel.h */,
-				4B5F4E581F948D890020D642 /* MainModel.m */,
+				4BBBF5731F9F1ECF005184B8 /* 首页model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +226,7 @@
 		4B5F4E561F948D650020D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BBBF5741F9F1F43005184B8 /* 广告View */,
 				4B0152821F9894E0003300DF /* 首页View */,
 				4B3909291F96F5CE00B04FFE /* 播放VIew */,
 			);
@@ -277,6 +296,35 @@
 				4BF6577C1F95D3DB00E8ECD6 /* LoginController.m */,
 			);
 			path = "登录";
+			sourceTree = "<group>";
+		};
+		4BBBF5731F9F1ECF005184B8 /* 首页model */ = {
+			isa = PBXGroup;
+			children = (
+				4BA0CA491F9F03B50010FFDC /* DataModels.h */,
+				4BA0CA4D1F9F03B50010FFDC /* MainData.h */,
+				4BA0CA4A1F9F03B50010FFDC /* MainData.m */,
+				4BA0CA4B1F9F03B50010FFDC /* MainKeywords.h */,
+				4BA0CA4C1F9F03B50010FFDC /* MainKeywords.m */,
+				4BA0CA531F9F03B50010FFDC /* MainList.h */,
+				4BA0CA541F9F03B60010FFDC /* MainList.m */,
+				4BA0CA551F9F03B60010FFDC /* MainMainBaseClass.h */,
+				4BA0CA501F9F03B50010FFDC /* MainMainBaseClass.m */,
+				4BA0CA521F9F03B50010FFDC /* MainProperties.h */,
+				4BA0CA4F1F9F03B50010FFDC /* MainProperties.m */,
+				4BA0CA4E1F9F03B50010FFDC /* MainTarget.h */,
+				4BA0CA511F9F03B50010FFDC /* MainTarget.m */,
+			);
+			path = "首页model";
+			sourceTree = "<group>";
+		};
+		4BBBF5741F9F1F43005184B8 /* 广告View */ = {
+			isa = PBXGroup;
+			children = (
+				4BBBF5751F9F1FE2005184B8 /* ADScrollView.h */,
+				4BBBF5761F9F1FE2005184B8 /* ADScrollView.m */,
+			);
+			path = "广告View";
 			sourceTree = "<group>";
 		};
 		4BE9B7051F67903300DBFF67 /* UITool */ = {
@@ -532,6 +580,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B499C9F1F9F33A8003C1C48 /* MainData.m in Sources */,
+				4BBBF5721F9F0622005184B8 /* MainProperties.m in Sources */,
+				4BBBF5711F9F061A005184B8 /* MainTarget.m in Sources */,
+				4BBBF5701F9F0615005184B8 /* MainKeywords.m in Sources */,
+				4BBBF56F1F9F0605005184B8 /* MainList.m in Sources */,
+				4BBBF56E1F9F05EE005184B8 /* MainMainBaseClass.m in Sources */,
 				4B9C5AEA1F99D94E00F6DDDE /* UIView+Frame.m in Sources */,
 				4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */,
 				4B9C5AE41F99D24C00F6DDDE /* SubClassController.m in Sources */,
@@ -540,7 +594,6 @@
 				4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */,
 				4B90C6671F9841F400E3CEC9 /* IdleController.m in Sources */,
 				4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */,
-				4B5F4E591F948D890020D642 /* MainModel.m in Sources */,
 				4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */,
 				4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */,
 				4B1010B21F974D0B001401E0 /* TestController.m in Sources */,
@@ -552,6 +605,7 @@
 				4B5F4E5D1F94930C0020D642 /* LaunchController.m in Sources */,
 				4B9C5AE71F99D29900F6DDDE /* FineController.m in Sources */,
 				4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */,
+				4BBBF5771F9F1FE2005184B8 /* ADScrollView.m in Sources */,
 				4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */,
 				4BFC3A4A1F4E98F5000EE6E3 /* AppDelegate.m in Sources */,
 				4B9C5AE11F99D1E400F6DDDE /* HotController.m in Sources */,

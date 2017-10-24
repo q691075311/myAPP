@@ -8,4 +8,5 @@ pod 'SVProgressHUD'
 pod 'SDCycleScrollView'
 pod 'AFNetworking'
 pod 'YYCache'
+pod 'JSONModel', '~> 1.7.0'
 end

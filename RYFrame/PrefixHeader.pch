@@ -30,6 +30,7 @@
 #import "RYBaseRequest.h"
 #import "SVProgressHUD.h"
 #import "TabbarPlayView.h"
+#import "DataModels.h"
 //数据缓存类
 #import "YYCache.h"
 

@@ -7,11 +7,10 @@
 //
 
 #import "MainController.h"
-#import "MainRequest.h"
 #import "MainTopChooseView.h"
 
 
-@interface MainController ()<RYBaseRequestDelegate,UIScrollViewDelegate,MainTopChooseViewDelegate>
+@interface MainController ()<UIScrollViewDelegate,MainTopChooseViewDelegate>
 @property (nonatomic,strong) NSURLSessionDownloadTask * downTask;
 @property (nonatomic,strong) MainTopChooseView * topItemView;
 @property (nonatomic,strong) UIScrollView * contentScrollView;
@@ -91,10 +90,6 @@
 #pragma mark -- MainTopChooseViewDelegate
 - (void)touchBtn:(UIButton *)btn{
     [self.contentScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (btn.tag - 100), 0) animated:YES];
-}
-
-- (void)getWorkingProgress:(NSProgress *)progress{
-    NSLog(@"%@",progress);
 }
 
 

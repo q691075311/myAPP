@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A7D4E9DF28FAACBE6BCDB933F1D50422'
+               BlueprintIdentifier = '58D34E97D9005318EAAF99FA04759452'
                BlueprintName = 'Pods-RYFrame'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-RYFrame.a'>
