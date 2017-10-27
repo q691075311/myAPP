@@ -32,11 +32,9 @@
         [imageArr addObject:adv.cover];
     }
     self.imageURLStringsGroup = imageArr;
+    self.autoScrollTimeInterval = 5;
     self.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     self.currentPageDotColor = [UIColor whiteColor];
-    self.clickItemOperationBlock = ^(NSInteger currentIndex) {
-        
-    };
 }
 
 @end

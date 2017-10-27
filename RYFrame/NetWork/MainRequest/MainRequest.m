@@ -19,8 +19,8 @@
                                   withSuccess:^(id responseObject) {
                                       RYResponse(responseObject);
                                   }
-                                     withFail:^(NSError *error, NSDictionary *dic) {
-                                         
+                                     withFail:^(NSError *error, id failInfo) {
+                                         RYResponse(failInfo);
                                      }];
 }
 

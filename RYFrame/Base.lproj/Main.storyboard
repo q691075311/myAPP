@@ -45,6 +45,24 @@
             </objects>
             <point key="canvasLocation" x="450" y="-45"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="5jo-IQ-1jl">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="P5r-wP-yDJ" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gvr-cp-U4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aff-TG-C2I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eYK-mP-t34">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVP-nk-rdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="-45"/>
+        </scene>
         <!--Launch Controller-->
         <scene sceneID="3UV-8J-XFg">
             <objects>

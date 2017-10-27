@@ -14,6 +14,8 @@
 - (void)touchHistoy;
 //点击下载
 - (void)touchDownLoad;
+//点击返回
+- (void)touchBack;
 @end
 
 typedef NS_ENUM(NSInteger,NavBarType){
@@ -21,9 +23,15 @@ typedef NS_ENUM(NSInteger,NavBarType){
     NavBarType_Normal = 1,
     NavBarType_MyInfo = 2,
     NavBarType_Play = 3,
+    NavBarType_WebView = 4,
 };
 
 @interface RYNavBar : UIView
+
+/**
+ 返回的Btn
+ */
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
 
 /**
  首页信箱

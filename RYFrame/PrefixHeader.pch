@@ -31,6 +31,7 @@
 #import "SVProgressHUD.h"
 #import "TabbarPlayView.h"
 #import "DataModels.h"
+#import "UIImageView+WebCache.h"
 //数据缓存类
 #import "YYCache.h"
 

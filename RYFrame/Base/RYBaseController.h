@@ -26,4 +26,24 @@
  */
 - (void)setStatusBarBackgroundColor:(UIColor *)color;
 
+/**
+ 跳转页面
+
+ @param controller 跳转到的页面
+ @param storyBord storyBord
+ @param from self
+ @param touchEmail info
+ */
+- (void)pushToController:(NSString *)controller
+           withStoryBord:(NSString *)storyBord
+                    from:(UIViewController *)from
+                withInfo:(NSDictionary *)info;
+
+/**
+ RYNavBarDelegate
+ */
+- (void)touchEmail;
+- (void)touchHistoy;
+- (void)touchDownLoad;
+- (void)touchBack;
 @end

@@ -7,15 +7,15 @@
 //
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
-@protocol ADScrollViewDelegate <NSObject>
-
-- (void)touchADWithCurrentIndex:(NSInteger)currentIndex;
-
-@end
+//@protocol ADScrollViewDelegate <NSObject>
+//
+//- (void)touchADWithCurrentIndex:(NSInteger)currentIndex;
+//
+//@end
 
 @interface ADScrollView : SDCycleScrollView
 
-@property (nonatomic,assign) id <ADScrollViewDelegate>delegate;
+//@property (nonatomic,assign) id <ADScrollViewDelegate>delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame withADArr:(NSArray *)adArr;
 

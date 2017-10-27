@@ -21,7 +21,6 @@
                         <constraint firstAttribute="width" constant="22" id="QhE-rD-m3h"/>
                         <constraint firstAttribute="height" constant="22" id="er3-gL-gsd"/>
                     </constraints>
-                    <state key="normal" image="email"/>
                     <connections>
                         <action selector="clickEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="dAD-Zu-22w"/>
                     </connections>
@@ -39,7 +38,6 @@
                         <constraint firstAttribute="height" constant="22" id="iZ3-Fn-b54"/>
                         <constraint firstAttribute="width" constant="22" id="sHQ-vK-Vlg"/>
                     </constraints>
-                    <state key="normal" image="download"/>
                     <connections>
                         <action selector="clickDownLoad:" destination="iN0-l3-epB" eventType="touchUpInside" id="cjs-W9-l43"/>
                     </connections>
@@ -50,7 +48,6 @@
                         <constraint firstAttribute="width" constant="22" id="Rt6-xx-u7r"/>
                         <constraint firstAttribute="height" constant="22" id="h5D-nV-jM1"/>
                     </constraints>
-                    <state key="normal" image="time"/>
                     <connections>
                         <action selector="clickHistory:" destination="iN0-l3-epB" eventType="touchUpInside" id="KH1-T2-iLd"/>
                     </connections>
@@ -66,34 +63,48 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjP-di-bE7">
-                    <rect key="frame" x="157" y="21.5" width="60" height="20"/>
+                    <rect key="frame" x="85" y="21.5" width="205" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="2Yw-Yc-q7k"/>
-                        <constraint firstAttribute="width" constant="60" id="sdq-S4-P49"/>
+                        <constraint firstAttribute="height" constant="20" id="rpH-EK-hgG"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTZ-SB-6g1">
+                    <rect key="frame" x="16" y="9.5" width="30" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="izj-Oj-Ncr"/>
+                        <constraint firstAttribute="width" constant="30" id="x1q-m8-Bwh"/>
+                    </constraints>
+                    <connections>
+                        <action selector="backBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="no4-HK-W1m"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="JBo-zb-oxq" firstAttribute="leading" secondItem="EsQ-Y8-2gh" secondAttribute="trailing" constant="16" id="3fW-hE-Ak2"/>
                 <constraint firstItem="L9w-Se-KUy" firstAttribute="leading" secondItem="JBo-zb-oxq" secondAttribute="trailing" constant="20" id="6en-mC-vv7"/>
+                <constraint firstAttribute="trailing" secondItem="wjP-di-bE7" secondAttribute="trailing" constant="85" id="Bsi-T5-bye"/>
                 <constraint firstItem="EsQ-Y8-2gh" firstAttribute="leading" secondItem="Cyf-YB-02Y" secondAttribute="trailing" constant="16" id="Cc7-vB-9C2"/>
                 <constraint firstItem="Cyf-YB-02Y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="DgF-4X-BD7"/>
                 <constraint firstItem="JBo-zb-oxq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Gqs-D7-VTq"/>
                 <constraint firstAttribute="trailing" secondItem="3AG-lI-0Rt" secondAttribute="trailing" id="Igl-ci-ApL"/>
+                <constraint firstItem="wjP-di-bE7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="85" id="MBI-x3-KH1"/>
                 <constraint firstItem="L9w-Se-KUy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="R6T-j6-4Uc"/>
                 <constraint firstItem="wjP-di-bE7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="T9O-l1-oiF"/>
                 <constraint firstItem="Cyf-YB-02Y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VXN-6r-tbd"/>
                 <constraint firstAttribute="bottom" secondItem="3AG-lI-0Rt" secondAttribute="bottom" id="W4O-X2-TgS"/>
+                <constraint firstItem="yTZ-SB-6g1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cIf-Zh-6qb"/>
                 <constraint firstItem="3AG-lI-0Rt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mYf-Po-mQJ"/>
                 <constraint firstItem="wjP-di-bE7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oNu-Qk-JfS"/>
                 <constraint firstAttribute="trailing" secondItem="L9w-Se-KUy" secondAttribute="trailing" constant="16" id="op8-OD-Cye"/>
                 <constraint firstItem="EsQ-Y8-2gh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qjT-7x-hbK"/>
+                <constraint firstItem="yTZ-SB-6g1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="rWZ-dc-ghl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="backBtn" destination="yTZ-SB-6g1" id="6ME-yL-MZo"/>
                 <outlet property="downLoadBtn" destination="L9w-Se-KUy" id="rzC-aU-CFP"/>
                 <outlet property="emailBtn" destination="Cyf-YB-02Y" id="JRx-U9-Hdx"/>
                 <outlet property="historyBtn" destination="JBo-zb-oxq" id="m5W-ZA-Sih"/>
@@ -101,12 +112,7 @@
                 <outlet property="searchFaild" destination="EsQ-Y8-2gh" id="xV8-qB-Ceg"/>
                 <outlet property="title" destination="wjP-di-bE7" id="hht-8g-xlC"/>
             </connections>
-            <point key="canvasLocation" x="-113.5" y="-4"/>
+            <point key="canvasLocation" x="4" y="-18"/>
         </view>
     </objects>
-    <resources>
-        <image name="download" width="22" height="22"/>
-        <image name="email" width="22" height="22"/>
-        <image name="time" width="22" height="22"/>
-    </resources>
 </document>

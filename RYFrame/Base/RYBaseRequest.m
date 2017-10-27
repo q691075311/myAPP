@@ -42,12 +42,14 @@
             progress(downloadProgress);
         }
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             success([self parsingJSONResponseObject:responseObject withURL:URLStr]);
+             //缓存数据responseObject
+             [self handlingRequestCacheWithURL:URLStr withResponseObject:responseObject];
+             success([self parsingJSONResponseObject:responseObject]);
          }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             fail(error,nil);
+             fail(error,[self parsingJSONResponseObject:[self getRequestCacheWithURL:URLStr]]);
          }];
-     
+    
 }
 #pragma mark -- 发起POST请求
 - (void)post_withURL:(NSString *)URLStr
@@ -67,7 +69,7 @@
          }
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               //判断返回内容并做缓存
-              success([self parsingJSONResponseObject:responseObject withURL:URLStr]);
+              success([self parsingJSONResponseObject:responseObject]);
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
               
@@ -108,7 +110,7 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
              progress(uploadProgress);
          }
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-              success([self parsingJSONResponseObject:responseObject withURL:URLStr]);
+              success([self parsingJSONResponseObject:responseObject]);
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
               fail(error,nil);
@@ -177,22 +179,25 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
     }
 }
 #pragma mark -- 解析JSON数据
-- (id)parsingJSONResponseObject:(id)responseObject withURL:(NSString *)url{
+- (id)parsingJSONResponseObject:(id)responseObject{
     NSError * JSONError;
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject
                                                          options:NSJSONReadingMutableContainers
                                                            error:&JSONError];
     if (!JSONError) {//尝试解析数据，如果解析不成功，就直接返回responseObject
         //根据服务端判断JSON中Code的值  如果code成功就处理缓存
-        [self handlingRequestCacheWithURL:url withResponseObject:dic];
+//        [self handlingRequestCacheWithURL:url withResponseObject:dic];
         return dic;
     }
-    NSLog(@"解析JSON数据失败");
     return responseObject;
 }
 #pragma mark -- 利用YYCache缓存数据
-- (void)handlingRequestCacheWithURL:(NSString *)url withResponseObject:(NSDictionary *)respDic{
-    [_yyCache setObject:respDic forKey:url];
+- (void)handlingRequestCacheWithURL:(NSString *)url withResponseObject:(id)respObject{
+    [self.yyCache setObject:respObject forKey:url];
+}
+#pragma mark -- 取出YYCache缓存数据
+- (id)getRequestCacheWithURL:(NSString *)url{
+    return [self.yyCache objectForKey:url];
 }
 #pragma mark -- 配置AFHTTPSessionManager
 - (AFHTTPSessionManager *)configurationAFHTTPSessionManager{

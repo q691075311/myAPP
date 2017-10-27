@@ -42,6 +42,7 @@
     self.downLoadBtn.hidden = YES;
     self.title.hidden = YES;
     self.lineView.hidden = YES;
+    self.backBtn.hidden = YES;
 }
 - (void)configNavbarWithTitle:(NSString *)title withType:(NavBarType)barType{
     self.title.text = title;
@@ -77,6 +78,14 @@
             
         }
             break;
+        case NavBarType_WebView:{
+            self.backBtn.hidden = NO;
+            self.title.hidden = NO;
+            [self.backBtn setImage:[UIImage imageNamed:@"navBack"] forState:UIControlStateNormal];
+        }
+            break;
+            
+            
             
         default:
             break;
@@ -116,5 +125,9 @@
     }
 }
 
-
+- (IBAction)backBtn:(UIButton *)sender {
+    if (_delegate && [_delegate respondsToSelector:@selector(touchBack)]) {
+        [_delegate touchBack];
+    }
+}
 @end

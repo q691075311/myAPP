@@ -15,6 +15,10 @@
 		4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126271F9DD6C7001BD95B /* BroadcastController.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
+		4B4188131FA2C959000ED903 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4188121FA2C959000ED903 /* WebViewController.m */; };
+		4B4188171FA2CE5D000ED903 /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4188161FA2CE5D000ED903 /* WebViewModel.m */; };
+		4B44FA3E1FA2E381003FB541 /* RYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44FA3D1FA2E381003FB541 /* RYWebView.m */; };
+		4B47E7141FA1AB61001A7E80 /* MainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B47E7131FA1AB61001A7E80 /* MainTabView.m */; };
 		4B499C9F1F9F33A8003C1C48 /* MainData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0CA4A1F9F03B50010FFDC /* MainData.m */; };
 		4B5F1AEF1F67AFB400A9918F /* UIColor+RY.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */; };
 		4B5F1AF21F67AFF300A9918F /* RYNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5F1AF11F67AFF300A9918F /* RYNavBar.m */; };
@@ -68,6 +72,14 @@
 		4B1449141F662F5B000F544A /* RYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYTool.m; sourceTree = "<group>"; };
 		4B39092A1F96F61400B04FFE /* TabbarPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarPlayView.h; sourceTree = "<group>"; };
 		4B39092B1F96F61400B04FFE /* TabbarPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarPlayView.m; sourceTree = "<group>"; };
+		4B4188111FA2C959000ED903 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4B4188121FA2C959000ED903 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4B4188151FA2CE5D000ED903 /* WebViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewModel.h; sourceTree = "<group>"; };
+		4B4188161FA2CE5D000ED903 /* WebViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewModel.m; sourceTree = "<group>"; };
+		4B44FA3C1FA2E381003FB541 /* RYWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYWebView.h; sourceTree = "<group>"; };
+		4B44FA3D1FA2E381003FB541 /* RYWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYWebView.m; sourceTree = "<group>"; };
+		4B47E7121FA1AB61001A7E80 /* MainTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabView.h; sourceTree = "<group>"; };
+		4B47E7131FA1AB61001A7E80 /* MainTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabView.m; sourceTree = "<group>"; };
 		4B5F1AED1F67AFB400A9918F /* UIColor+RY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RY.h"; sourceTree = "<group>"; };
 		4B5F1AEE1F67AFB400A9918F /* UIColor+RY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RY.m"; sourceTree = "<group>"; };
 		4B5F1AF01F67AFF300A9918F /* RYNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYNavBar.h; sourceTree = "<group>"; };
@@ -175,6 +187,42 @@
 			path = "播放VIew";
 			sourceTree = "<group>";
 		};
+		4B4188101FA2C928000ED903 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4188111FA2C959000ED903 /* WebViewController.h */,
+				4B4188121FA2C959000ED903 /* WebViewController.m */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
+		4B4188141FA2CE32000ED903 /* WebModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B4188151FA2CE5D000ED903 /* WebViewModel.h */,
+				4B4188161FA2CE5D000ED903 /* WebViewModel.m */,
+			);
+			path = WebModel;
+			sourceTree = "<group>";
+		};
+		4B44FA3B1FA2E358003FB541 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4B44FA3C1FA2E381003FB541 /* RYWebView.h */,
+				4B44FA3D1FA2E381003FB541 /* RYWebView.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		4B47E7111FA1AB19001A7E80 /* 首页BtnTab */ = {
+			isa = PBXGroup;
+			children = (
+				4B47E7121FA1AB61001A7E80 /* MainTabView.h */,
+				4B47E7131FA1AB61001A7E80 /* MainTabView.m */,
+			);
+			path = "首页BtnTab";
+			sourceTree = "<group>";
+		};
 		4B5F4E4A1F9485C50020D642 /* MainRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +259,7 @@
 				4BB963A71F95CB3C003E5814 /* 发现 */,
 				4BB963A81F95CB45003E5814 /* 登录 */,
 				4B5F4E5A1F9492CE0020D642 /* Launch */,
+				4B4188101FA2C928000ED903 /* WebViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				4BBBF5731F9F1ECF005184B8 /* 首页model */,
+				4B4188141FA2CE32000ED903 /* WebModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +276,8 @@
 		4B5F4E561F948D650020D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B44FA3B1FA2E358003FB541 /* WebView */,
+				4B47E7111FA1AB19001A7E80 /* 首页BtnTab */,
 				4BBBF5741F9F1F43005184B8 /* 广告View */,
 				4B0152821F9894E0003300DF /* 首页View */,
 				4B3909291F96F5CE00B04FFE /* 播放VIew */,
@@ -581,11 +633,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B499C9F1F9F33A8003C1C48 /* MainData.m in Sources */,
+				4B4188131FA2C959000ED903 /* WebViewController.m in Sources */,
 				4BBBF5721F9F0622005184B8 /* MainProperties.m in Sources */,
 				4BBBF5711F9F061A005184B8 /* MainTarget.m in Sources */,
 				4BBBF5701F9F0615005184B8 /* MainKeywords.m in Sources */,
 				4BBBF56F1F9F0605005184B8 /* MainList.m in Sources */,
 				4BBBF56E1F9F05EE005184B8 /* MainMainBaseClass.m in Sources */,
+				4B44FA3E1FA2E381003FB541 /* RYWebView.m in Sources */,
+				4B4188171FA2CE5D000ED903 /* WebViewModel.m in Sources */,
 				4B9C5AEA1F99D94E00F6DDDE /* UIView+Frame.m in Sources */,
 				4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */,
 				4B9C5AE41F99D24C00F6DDDE /* SubClassController.m in Sources */,
@@ -597,6 +652,7 @@
 				4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */,
 				4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */,
 				4B1010B21F974D0B001401E0 /* TestController.m in Sources */,
+				4B47E7141FA1AB61001A7E80 /* MainTabView.m in Sources */,
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,
 				4BF6577D1F95D3DB00E8ECD6 /* LoginController.m in Sources */,

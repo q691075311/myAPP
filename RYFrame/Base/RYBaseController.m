@@ -27,6 +27,15 @@
         statusBar.backgroundColor = color;
     }
 }
+- (void)pushToController:(NSString *)controller
+           withStoryBord:(NSString *)storyName
+                    from:(UIViewController *)from
+                withInfo:(NSDictionary *)info{
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:storyName bundle:nil];
+    RYBaseController * VC = [storyBoard instantiateViewControllerWithIdentifier:controller];
+    VC.info = info;
+    [from .navigationController pushViewController:VC animated:YES];
+}
 #pragma mark -- RYNavBarDelegate
 //点击邮箱
 - (void)touchEmail{
@@ -40,5 +49,7 @@
 - (void)touchDownLoad{
     NSLog(@"touchDownLoad");
 }
-
+- (void)touchBack{
+    NSLog(@"touchBack");
+}
 @end
