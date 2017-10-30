@@ -12,6 +12,9 @@
 #import "MainTabView.h"
 #import "WebViewModel.h"
 #import "WebViewController.h"
+#import "GuessLikeCell.h"
+#import "CellHeaderView.h"
+
 
 @interface HotController ()<UITableViewDelegate,UITableViewDataSource,MainTabViewDelegate>
 
@@ -46,7 +49,7 @@
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] init];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth)];
     }
     return _tableView;
 }
@@ -58,10 +61,10 @@
 }
 #pragma mark -- 初始化界面内容
 - (void)initContentView{
-    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth);
-    self.tableView.backgroundColor = [UIColor darkGrayColor];
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
+//    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth);
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     [self createTableViewHeadView];
     [self.view addSubview:self.tableView];
 }
@@ -110,14 +113,44 @@
     
 }
 #pragma mark -- UITableViewDataSource
+//分区的区数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
+//row的高度
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
+//配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    NSString * identfier = @"GuessLikeCell";
+    GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"GuessLikeCell" owner:self options:nil] lastObject];
+    }
+    cell.backgroundColor = [UIColor ry_colorWithHexString:@"#ffffff"];
+    return cell;
+}
+//cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 90;
+}
+//设置区头的View
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    CellHeaderView * headView = [[CellHeaderView alloc] init];
+    return headView;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
+}
+//设置区尾的View
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
+    view.backgroundColor = [UIColor yellowColor];
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 50;
 }
 #pragma mark -- 请求首页所有信息
 - (void)requestMainInfo{

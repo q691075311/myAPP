@@ -30,6 +30,9 @@
 		4B9C5AE41F99D24C00F6DDDE /* SubClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE31F99D24C00F6DDDE /* SubClassController.m */; };
 		4B9C5AE71F99D29900F6DDDE /* FineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE61F99D29900F6DDDE /* FineController.m */; };
 		4B9C5AEA1F99D94E00F6DDDE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9C5AE91F99D94E00F6DDDE /* UIView+Frame.m */; };
+		4BA2525B1FA6F44B00EEB31A /* CellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2525A1FA6F44B00EEB31A /* CellHeaderView.m */; };
+		4BA2525E1FA6F45E00EEB31A /* CellFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */; };
+		4BA252601FA6F9FB00EEB31A /* CellHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */; };
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
@@ -43,6 +46,8 @@
 		4BBBF5771F9F1FE2005184B8 /* ADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF5761F9F1FE2005184B8 /* ADScrollView.m */; };
 		4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7001F676BE000DBFF67 /* RYBaseController.m */; };
 		4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7031F67842B00DBFF67 /* MainController.m */; };
+		4BEB94A81FA329AA00880C51 /* GuessLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */; };
+		4BEB94AC1FA32A1800880C51 /* GuessLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */; };
 		4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657711F95D35200E8ECD6 /* Find.storyboard */; };
 		4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657731F95D36D00E8ECD6 /* Login.storyboard */; };
 		4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF657761F95D3B300E8ECD6 /* MeListenController.m */; };
@@ -112,6 +117,11 @@
 		4BA0CA531F9F03B50010FFDC /* MainList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainList.h; sourceTree = "<group>"; };
 		4BA0CA541F9F03B60010FFDC /* MainList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainList.m; sourceTree = "<group>"; };
 		4BA0CA551F9F03B60010FFDC /* MainMainBaseClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMainBaseClass.h; sourceTree = "<group>"; };
+		4BA252591FA6F44B00EEB31A /* CellHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellHeaderView.h; sourceTree = "<group>"; };
+		4BA2525A1FA6F44B00EEB31A /* CellHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellHeaderView.m; sourceTree = "<group>"; };
+		4BA2525C1FA6F45E00EEB31A /* CellFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellFooterView.h; sourceTree = "<group>"; };
+		4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellFooterView.m; sourceTree = "<group>"; };
+		4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellHeaderView.xib; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -126,6 +136,9 @@
 		4BE9B7001F676BE000DBFF67 /* RYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseController.m; sourceTree = "<group>"; };
 		4BE9B7021F67842B00DBFF67 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		4BE9B7031F67842B00DBFF67 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		4BEB94A61FA329AA00880C51 /* GuessLikeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuessLikeCell.h; sourceTree = "<group>"; };
+		4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessLikeCell.m; sourceTree = "<group>"; };
+		4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuessLikeCell.xib; sourceTree = "<group>"; };
 		4BF657711F95D35200E8ECD6 /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		4BF657731F95D36D00E8ECD6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4BF657751F95D3B300E8ECD6 /* MeListenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeListenController.h; sourceTree = "<group>"; };
@@ -276,6 +289,8 @@
 		4B5F4E561F948D650020D642 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BEB94A51FA3295D00880C51 /* cell */,
+				4BA252581FA6F3EF00EEB31A /* cell的公用View */,
 				4B44FA3B1FA2E358003FB541 /* WebView */,
 				4B47E7111FA1AB19001A7E80 /* 首页BtnTab */,
 				4BBBF5741F9F1F43005184B8 /* 广告View */,
@@ -309,6 +324,18 @@
 				4B1126271F9DD6C7001BD95B /* BroadcastController.m */,
 			);
 			path = "首页子视图";
+			sourceTree = "<group>";
+		};
+		4BA252581FA6F3EF00EEB31A /* cell的公用View */ = {
+			isa = PBXGroup;
+			children = (
+				4BA252591FA6F44B00EEB31A /* CellHeaderView.h */,
+				4BA2525A1FA6F44B00EEB31A /* CellHeaderView.m */,
+				4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */,
+				4BA2525C1FA6F45E00EEB31A /* CellFooterView.h */,
+				4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */,
+			);
+			path = "cell的公用View";
 			sourceTree = "<group>";
 		};
 		4BB963A51F95CB21003E5814 /* 首页 */ = {
@@ -395,6 +422,16 @@
 				4BB9639D1F95B59D003E5814 /* TabBarController.m */,
 			);
 			path = UITool;
+			sourceTree = "<group>";
+		};
+		4BEB94A51FA3295D00880C51 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4BEB94A61FA329AA00880C51 /* GuessLikeCell.h */,
+				4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */,
+				4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		4BFC3A391F4E98F5000EE6E3 = {
@@ -561,10 +598,12 @@
 			files = (
 				4BB963A41F95CA8F003E5814 /* MeListen.storyboard in Resources */,
 				4BFC3A581F4E98F6000EE6E3 /* LaunchScreen.storyboard in Resources */,
+				4BA252601FA6F9FB00EEB31A /* CellHeaderView.xib in Resources */,
 				4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */,
 				4BFC3A551F4E98F6000EE6E3 /* Assets.xcassets in Resources */,
 				4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */,
 				4BFC3A501F4E98F5000EE6E3 /* Main.storyboard in Resources */,
+				4BEB94AC1FA32A1800880C51 /* GuessLikeCell.xib in Resources */,
 				4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +692,7 @@
 				4B1126221F9DB9F9001BD95B /* RYImageView.m in Sources */,
 				4B1010B21F974D0B001401E0 /* TestController.m in Sources */,
 				4B47E7141FA1AB61001A7E80 /* MainTabView.m in Sources */,
+				4BA2525E1FA6F45E00EEB31A /* CellFooterView.m in Sources */,
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,
 				4BF6577D1F95D3DB00E8ECD6 /* LoginController.m in Sources */,
@@ -668,6 +708,8 @@
 				4B1449151F662F5B000F544A /* RYTool.m in Sources */,
 				4B0152851F989530003300DF /* MainTopChooseView.m in Sources */,
 				4BFC3A471F4E98F5000EE6E3 /* main.m in Sources */,
+				4BA2525B1FA6F44B00EEB31A /* CellHeaderView.m in Sources */,
+				4BEB94A81FA329AA00880C51 /* GuessLikeCell.m in Sources */,
 				4B1126251F9DD67C001BD95B /* LiveController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
