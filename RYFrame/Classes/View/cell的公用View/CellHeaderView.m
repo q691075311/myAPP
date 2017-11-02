@@ -26,4 +26,12 @@
     }
     return self;
 }
+
+- (void)setItemArr:(NSArray *)itemArr{
+    if (itemArr == nil) return;
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 50)];
+    view.backgroundColor = [UIColor redColor];
+    [self addSubview:view];
+}
+
 @end

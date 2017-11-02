@@ -14,7 +14,7 @@
 #import "WebViewController.h"
 #import "GuessLikeCell.h"
 #import "CellHeaderView.h"
-
+#import "CellFooterView.h"
 
 @interface HotController ()<UITableViewDelegate,UITableViewDataSource,MainTabViewDelegate>
 
@@ -49,7 +49,7 @@
 }
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth)];
+        _tableView = [[UITableView alloc] init];
     }
     return _tableView;
 }
@@ -61,7 +61,7 @@
 }
 #pragma mark -- 初始化界面内容
 - (void)initContentView{
-//    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth);
+    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth);
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -115,25 +115,31 @@
 #pragma mark -- UITableViewDataSource
 //分区的区数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 //row的高度
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 1;
 }
 //配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString * identfier = @"GuessLikeCell";
-    GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"GuessLikeCell" owner:self options:nil] lastObject];
+    if (indexPath.section == 0) {
+        NSString * identfier = @"GuessLikeCell";
+        GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"GuessLikeCell" owner:self options:nil] lastObject];
+        }
+        cell.backgroundColor = [UIColor ry_colorWithHexString:@"#ffffff"];
+        return cell;
     }
-    cell.backgroundColor = [UIColor ry_colorWithHexString:@"#ffffff"];
-    return cell;
+    return nil;
 }
 //cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90;
+    if (indexPath.section == 0) {
+        return 400;
+    }
+    return 0;
 }
 //设置区头的View
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -145,12 +151,31 @@
 }
 //设置区尾的View
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
-    view.backgroundColor = [UIColor yellowColor];
+    CellFooterView * view = [[CellFooterView alloc] init];
     return view;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 50;
+}
+//点击cell的方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+//设置区头和区尾不悬浮
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat sectionHeaderHeight = 50;
+    CGFloat sectionFooterHeight = 50;
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY >= 0 && offsetY <= sectionHeaderHeight)
+    {
+        scrollView.contentInset = UIEdgeInsetsMake(-offsetY, 0, -sectionFooterHeight, 0);
+    }else if (offsetY >= sectionHeaderHeight && offsetY <= scrollView.contentSize.height - scrollView.frame.size.height - sectionFooterHeight)
+    {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, -sectionFooterHeight, 0);
+    }else if (offsetY >= scrollView.contentSize.height - scrollView.frame.size.height - sectionFooterHeight && offsetY <= scrollView.contentSize.height - scrollView.frame.size.height)
+    {
+        scrollView.contentInset = UIEdgeInsetsMake(-offsetY, 0, -(scrollView.contentSize.height - scrollView.frame.size.height - sectionFooterHeight), 0);
+    }
 }
 #pragma mark -- 请求首页所有信息
 - (void)requestMainInfo{
@@ -160,6 +185,7 @@
         [self addADscrollerView];
         //添加头视图BtnView
         [self addTabView];
+        [self.tableView reloadData];
     }];
 }
 - (void)didReceiveMemoryWarning {

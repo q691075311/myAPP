@@ -10,4 +10,11 @@
 
 @interface CellFooterView : UIView
 
+/**
+ 刷新的image
+ */
+@property (weak, nonatomic) IBOutlet RYImageView *refreshImage;
+
+- (instancetype)init;
+
 @end

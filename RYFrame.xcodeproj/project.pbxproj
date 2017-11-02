@@ -15,6 +15,7 @@
 		4B1126281F9DD6C7001BD95B /* BroadcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1126271F9DD6C7001BD95B /* BroadcastController.m */; };
 		4B1449151F662F5B000F544A /* RYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1449141F662F5B000F544A /* RYTool.m */; };
 		4B39092C1F96F61400B04FFE /* TabbarPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39092B1F96F61400B04FFE /* TabbarPlayView.m */; };
+		4B3A0ADB1FA8222A00FA4686 /* CellFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A0ADA1FA8222A00FA4686 /* CellFooterView.xib */; };
 		4B4188131FA2C959000ED903 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4188121FA2C959000ED903 /* WebViewController.m */; };
 		4B4188171FA2CE5D000ED903 /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4188161FA2CE5D000ED903 /* WebViewModel.m */; };
 		4B44FA3E1FA2E381003FB541 /* RYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44FA3D1FA2E381003FB541 /* RYWebView.m */; };
@@ -77,6 +78,7 @@
 		4B1449141F662F5B000F544A /* RYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYTool.m; sourceTree = "<group>"; };
 		4B39092A1F96F61400B04FFE /* TabbarPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarPlayView.h; sourceTree = "<group>"; };
 		4B39092B1F96F61400B04FFE /* TabbarPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbarPlayView.m; sourceTree = "<group>"; };
+		4B3A0ADA1FA8222A00FA4686 /* CellFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellFooterView.xib; sourceTree = "<group>"; };
 		4B4188111FA2C959000ED903 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4B4188121FA2C959000ED903 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4B4188151FA2CE5D000ED903 /* WebViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewModel.h; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */,
 				4BA2525C1FA6F45E00EEB31A /* CellFooterView.h */,
 				4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */,
+				4B3A0ADA1FA8222A00FA4686 /* CellFooterView.xib */,
 			);
 			path = "cell的公用View";
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				4BB963A41F95CA8F003E5814 /* MeListen.storyboard in Resources */,
 				4BFC3A581F4E98F6000EE6E3 /* LaunchScreen.storyboard in Resources */,
 				4BA252601FA6F9FB00EEB31A /* CellHeaderView.xib in Resources */,
+				4B3A0ADB1FA8222A00FA4686 /* CellFooterView.xib in Resources */,
 				4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */,
 				4BFC3A551F4E98F6000EE6E3 /* Assets.xcassets in Resources */,
 				4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */,

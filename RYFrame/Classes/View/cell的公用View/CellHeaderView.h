@@ -10,6 +10,11 @@
 
 @interface CellHeaderView : UIView
 
+/**
+ 标签的数组
+ */
+@property (nonatomic,copy) NSArray * itemArr;
+
 - (instancetype)init;
 
 @end

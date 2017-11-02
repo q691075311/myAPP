@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CellFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfN-4U-PUM">
+                    <rect key="frame" x="156" y="12.5" width="62" height="25"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refresh" translatesAutoresizingMaskIntoConstraints="NO" id="tXx-xj-bDX" customClass="RYImageView">
+                            <rect key="frame" x="50" y="6" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="4SQ-jW-n6b"/>
+                                <constraint firstAttribute="width" constant="12" id="nfv-ec-670"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-ie-DRF">
+                            <rect key="frame" x="0.0" y="2.5" width="50" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Pvu-Ec-3Dv"/>
+                                <constraint firstAttribute="height" constant="19" id="bBo-uX-pZi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="换一批">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="refreshClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yds-f7-S8E"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="tXx-xj-bDX" secondAttribute="trailing" id="2Ai-LF-2ai"/>
+                        <constraint firstItem="tXx-xj-bDX" firstAttribute="centerY" secondItem="QfN-4U-PUM" secondAttribute="centerY" id="Ua4-nj-UUY"/>
+                        <constraint firstAttribute="width" constant="62" id="Vlx-JX-tZS"/>
+                        <constraint firstAttribute="height" constant="25" id="YyL-3D-DcW"/>
+                        <constraint firstItem="C0A-ie-DRF" firstAttribute="centerY" secondItem="QfN-4U-PUM" secondAttribute="centerY" id="abE-tX-O63"/>
+                        <constraint firstItem="C0A-ie-DRF" firstAttribute="leading" secondItem="QfN-4U-PUM" secondAttribute="leading" id="kuR-v4-jOV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QfN-4U-PUM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AVo-dq-Ivv"/>
+                <constraint firstItem="QfN-4U-PUM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YOk-qw-hRb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="refreshImage" destination="tXx-xj-bDX" id="0FG-Ka-R9g"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-128"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refresh" width="12" height="12"/>
+    </resources>
+</document>
