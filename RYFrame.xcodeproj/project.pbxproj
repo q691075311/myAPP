@@ -34,6 +34,9 @@
 		4BA2525B1FA6F44B00EEB31A /* CellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2525A1FA6F44B00EEB31A /* CellHeaderView.m */; };
 		4BA2525E1FA6F45E00EEB31A /* CellFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */; };
 		4BA252601FA6F9FB00EEB31A /* CellHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */; };
+		4BA42C951FAC3A480052B7A2 /* ExquisitelyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA42C941FAC3A480052B7A2 /* ExquisitelyCell.m */; };
+		4BA42C991FAC50130052B7A2 /* TalkShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA42C971FAC50130052B7A2 /* TalkShowCell.m */; };
+		4BA42C9A1FAC50130052B7A2 /* TalkShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BA42C981FAC50130052B7A2 /* TalkShowCell.xib */; };
 		4BA85B1D1F5E53C900A3B09E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */; };
 		4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */; };
 		4BAFF9631F6A2A8100B88DA6 /* RYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAFF9621F6A2A8100B88DA6 /* RYBaseRequest.m */; };
@@ -48,7 +51,6 @@
 		4BE9B7011F676BE000DBFF67 /* RYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7001F676BE000DBFF67 /* RYBaseController.m */; };
 		4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9B7031F67842B00DBFF67 /* MainController.m */; };
 		4BEB94A81FA329AA00880C51 /* GuessLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */; };
-		4BEB94AC1FA32A1800880C51 /* GuessLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */; };
 		4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657711F95D35200E8ECD6 /* Find.storyboard */; };
 		4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF657731F95D36D00E8ECD6 /* Login.storyboard */; };
 		4BF657771F95D3B300E8ECD6 /* MeListenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF657761F95D3B300E8ECD6 /* MeListenController.m */; };
@@ -124,6 +126,11 @@
 		4BA2525C1FA6F45E00EEB31A /* CellFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellFooterView.h; sourceTree = "<group>"; };
 		4BA2525D1FA6F45E00EEB31A /* CellFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellFooterView.m; sourceTree = "<group>"; };
 		4BA2525F1FA6F9FB00EEB31A /* CellHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellHeaderView.xib; sourceTree = "<group>"; };
+		4BA42C931FAC3A480052B7A2 /* ExquisitelyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExquisitelyCell.h; sourceTree = "<group>"; };
+		4BA42C941FAC3A480052B7A2 /* ExquisitelyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExquisitelyCell.m; sourceTree = "<group>"; };
+		4BA42C961FAC50130052B7A2 /* TalkShowCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalkShowCell.h; sourceTree = "<group>"; };
+		4BA42C971FAC50130052B7A2 /* TalkShowCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalkShowCell.m; sourceTree = "<group>"; };
+		4BA42C981FAC50130052B7A2 /* TalkShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkShowCell.xib; sourceTree = "<group>"; };
 		4BA85B1C1F5E53C900A3B09E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4BA85B1E1F5E54A600A3B09E /* RYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFMDBManager.h; sourceTree = "<group>"; };
 		4BA85B1F1F5E54A600A3B09E /* RYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFMDBManager.m; sourceTree = "<group>"; };
@@ -140,7 +147,6 @@
 		4BE9B7031F67842B00DBFF67 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		4BEB94A61FA329AA00880C51 /* GuessLikeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuessLikeCell.h; sourceTree = "<group>"; };
 		4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessLikeCell.m; sourceTree = "<group>"; };
-		4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuessLikeCell.xib; sourceTree = "<group>"; };
 		4BF657711F95D35200E8ECD6 /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		4BF657731F95D36D00E8ECD6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4BF657751F95D3B300E8ECD6 /* MeListenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeListenController.h; sourceTree = "<group>"; };
@@ -432,7 +438,11 @@
 			children = (
 				4BEB94A61FA329AA00880C51 /* GuessLikeCell.h */,
 				4BEB94A71FA329AA00880C51 /* GuessLikeCell.m */,
-				4BEB94AB1FA32A1800880C51 /* GuessLikeCell.xib */,
+				4BA42C931FAC3A480052B7A2 /* ExquisitelyCell.h */,
+				4BA42C941FAC3A480052B7A2 /* ExquisitelyCell.m */,
+				4BA42C961FAC50130052B7A2 /* TalkShowCell.h */,
+				4BA42C971FAC50130052B7A2 /* TalkShowCell.m */,
+				4BA42C981FAC50130052B7A2 /* TalkShowCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -603,11 +613,11 @@
 				4BFC3A581F4E98F6000EE6E3 /* LaunchScreen.storyboard in Resources */,
 				4BA252601FA6F9FB00EEB31A /* CellHeaderView.xib in Resources */,
 				4B3A0ADB1FA8222A00FA4686 /* CellFooterView.xib in Resources */,
+				4BA42C9A1FAC50130052B7A2 /* TalkShowCell.xib in Resources */,
 				4BF657741F95D36D00E8ECD6 /* Login.storyboard in Resources */,
 				4BFC3A551F4E98F6000EE6E3 /* Assets.xcassets in Resources */,
 				4B5F1AF41F67B00E00A9918F /* RYNavBar.xib in Resources */,
 				4BFC3A501F4E98F5000EE6E3 /* Main.storyboard in Resources */,
-				4BEB94AC1FA32A1800880C51 /* GuessLikeCell.xib in Resources */,
 				4BF657721F95D35200E8ECD6 /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,6 +691,7 @@
 				4BBBF5711F9F061A005184B8 /* MainTarget.m in Sources */,
 				4BBBF5701F9F0615005184B8 /* MainKeywords.m in Sources */,
 				4BBBF56F1F9F0605005184B8 /* MainList.m in Sources */,
+				4BA42C991FAC50130052B7A2 /* TalkShowCell.m in Sources */,
 				4BBBF56E1F9F05EE005184B8 /* MainMainBaseClass.m in Sources */,
 				4B44FA3E1FA2E381003FB541 /* RYWebView.m in Sources */,
 				4B4188171FA2CE5D000ED903 /* WebViewModel.m in Sources */,
@@ -697,6 +708,7 @@
 				4B1010B21F974D0B001401E0 /* TestController.m in Sources */,
 				4B47E7141FA1AB61001A7E80 /* MainTabView.m in Sources */,
 				4BA2525E1FA6F45E00EEB31A /* CellFooterView.m in Sources */,
+				4BA42C951FAC3A480052B7A2 /* ExquisitelyCell.m in Sources */,
 				4BA85B201F5E54A600A3B09E /* RYFMDBManager.m in Sources */,
 				4BE9B7041F67842B00DBFF67 /* MainController.m in Sources */,
 				4BF6577D1F95D3DB00E8ECD6 /* LoginController.m in Sources */,

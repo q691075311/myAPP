@@ -23,11 +23,11 @@
                         <constraint firstAttribute="height" constant="10" id="Tf3-zR-JR8"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猜你喜欢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-fm-2UE">
-                    <rect key="frame" x="15" y="17" width="80" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐好时光" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-fm-2UE">
+                    <rect key="frame" x="15" y="17" width="90" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="5SU-nw-maq"/>
-                        <constraint firstAttribute="width" constant="80" id="p1G-5P-4OR"/>
+                        <constraint firstAttribute="width" constant="90" id="p1G-5P-4OR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <nil key="textColor"/>
@@ -57,6 +57,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="titleLabel" destination="lPW-fm-2UE" id="6KF-NE-6Hl"/>
+            </connections>
             <point key="canvasLocation" x="20.5" y="-218.5"/>
         </view>
     </objects>

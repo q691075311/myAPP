@@ -15,6 +15,12 @@
 #import "GuessLikeCell.h"
 #import "CellHeaderView.h"
 #import "CellFooterView.h"
+#import "ExquisitelyCell.h"
+#import "TalkShowCell.h"
+
+#define VIEWWIDTH (SCREEN_WIDTH-15-15-5-5)/3
+#define VIEWHIEGTH (VIEWWIDTH) + 40
+#define ROWSPACING 5
 
 @interface HotController ()<UITableViewDelegate,UITableViewDataSource,MainTabViewDelegate>
 
@@ -24,7 +30,7 @@
 @property (nonatomic,strong) UIView * tableViewHeaderView;//tableView的头视图
 @property (nonatomic,strong) ADScrollView * adView;//广告轮播图
 @property (nonatomic,strong) MainTabView * tabBtnView;//tabBtnView
-
+@property (nonatomic,strong) NSMutableArray * sectionHeaderTitleArr;
 
 @end
 
@@ -34,12 +40,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navBar removeFromSuperview];
-    [self initContentView];
+    
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //请求首页数据
     [self requestMainInfo];
+    
 }
 - (NSArray *)advArr{
     if (!_advArr) {
@@ -52,6 +59,12 @@
         _tableView = [[UITableView alloc] init];
     }
     return _tableView;
+}
+- (NSMutableArray *)sectionHeaderTitleArr{
+    if (!_sectionHeaderTitleArr) {
+        _sectionHeaderTitleArr = [[NSMutableArray alloc] init];
+    }
+    return _sectionHeaderTitleArr;
 }
 #pragma mark -- 创建TableViewHeadView
 - (void)createTableViewHeadView{
@@ -68,7 +81,17 @@
     [self createTableViewHeadView];
     [self.view addSubview:self.tableView];
 }
-
+#pragma mark -- 初始化区头标题
+- (void)configSectionHeaderTitleArr{
+    [self.sectionHeaderTitleArr removeAllObjects];
+    [self.sectionHeaderTitleArr addObject:@"猜你喜欢"];
+    for (int i = 0; i<_mainBase.list.count; i ++) {
+        MainList * item = _mainBase.list[i];
+        if (item.title) {
+            [self.sectionHeaderTitleArr addObject:item.title];
+        }
+    }
+}
 #pragma mark -- 添加广告栏
 - (void)addADscrollerView{
     //取出广告数据
@@ -115,21 +138,49 @@
 #pragma mark -- UITableViewDataSource
 //分区的区数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+//    return self.sectionHeaderTitleArr.count;
+    return 3;
 }
-//row的高度
+//row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    if (section == 0) {
+        return 1;
+    }else if (section == 1){
+        return 1;
+    }else if (section == 2){
+        MainList * mainList = self.mainBase.list[4];
+        NSArray * arr = mainList.list;
+        return arr.count;
+    }
+    return 0;
 }
 //配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        NSString * identfier = @"GuessLikeCell";
+        static NSString * identfier = @"GuessLikeCell";
         GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
         if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"GuessLikeCell" owner:self options:nil] lastObject];
+            cell = [[GuessLikeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identfier];
         }
-        cell.backgroundColor = [UIColor ry_colorWithHexString:@"#ffffff"];
+        MainList * likeList = self.mainBase.list[2];
+        cell.likeList = likeList;
+        return cell;
+    }else if (indexPath.section == 1){
+        static NSString * identifier = @"ExquisitelyCell";
+        ExquisitelyCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[ExquisitelyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+        MainList * exquisitely = self.mainBase.list[3];
+        cell.exquisitelyList = exquisitely;
+        return cell;
+    }else if (indexPath.section == 2){
+        static NSString * identifier = @"TalkShowCell";
+        TalkShowCell * cell = (TalkShowCell *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] lastObject];
+        }
+        
         return cell;
     }
     return nil;
@@ -137,13 +188,18 @@
 //cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 400;
+        return (VIEWHIEGTH)*2+ROWSPACING;
+    }else if (indexPath.section == 1){
+        return (VIEWHIEGTH+20);
+    }else if (indexPath.section == 2){
+        return 100;
     }
-    return 0;
+    return 50;
 }
 //设置区头的View
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     CellHeaderView * headView = [[CellHeaderView alloc] init];
+    headView.titleLabel.text = self.sectionHeaderTitleArr[section];
     return headView;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -181,10 +237,15 @@
 - (void)requestMainInfo{
     [MainRequest mainRequestWithURL:MainURL withResponse:^(id response) {
         _mainBase = [MainMainBaseClass modelObjectWithDictionary:response];
+        //配置区头title数组
+        [self configSectionHeaderTitleArr];
+        //初始化tableView
+        [self initContentView];
         //添加广告图
         [self addADscrollerView];
         //添加头视图BtnView
         [self addTabView];
+        //刷新tableView
         [self.tableView reloadData];
     }];
 }

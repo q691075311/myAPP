@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GuessLikeCellDelegate <NSObject>
+
+- (void)guessLikeBtnClick:(UIButton *)btn;
+
+@end
+
 @interface GuessLikeCell : UITableViewCell
 
+/**
+ 猜你喜欢的数据
+ */
+@property (nonatomic,strong) MainList * likeList;
+@property (nonatomic,assign) id <GuessLikeCellDelegate> delegate;
 @end

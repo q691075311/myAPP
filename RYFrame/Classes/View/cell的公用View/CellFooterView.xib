@@ -50,10 +50,20 @@
                         <constraint firstItem="C0A-ie-DRF" firstAttribute="leading" secondItem="QfN-4U-PUM" secondAttribute="leading" id="kuR-v4-jOV"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjc-bM-K7n">
+                    <rect key="frame" x="15" y="0.0" width="345" height="1"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Q1l-cH-nVX"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="QfN-4U-PUM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AVo-dq-Ivv"/>
+                <constraint firstItem="Jjc-bM-K7n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="E6T-p2-vgh"/>
+                <constraint firstItem="Jjc-bM-K7n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="R19-8C-Ej6"/>
+                <constraint firstItem="Jjc-bM-K7n" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-15" id="RVm-as-AmX"/>
                 <constraint firstItem="QfN-4U-PUM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YOk-qw-hRb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

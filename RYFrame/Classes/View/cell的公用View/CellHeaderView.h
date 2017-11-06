@@ -15,6 +15,11 @@
  */
 @property (nonatomic,copy) NSArray * itemArr;
 
+/**
+ 标题
+ */
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 - (instancetype)init;
 
 @end
