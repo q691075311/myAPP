@@ -142,17 +142,17 @@
 //分区的区数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 //    return self.sectionHeaderTitleArr.count;
-    return 6;
+    return 9;
 }
 //row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
-    }else if (section == 1){
+    }else if (section == 1 || section == 8){
         return 1;
-    }else if (section == 2||section == 3||section == 4||section == 5) {
+    }else if (section == 2||section == 3||section == 4||section == 5||section == 6||section == 7) {
         NSInteger index;
-        if (section == 4||section == 5) {
+        if (section == 4||section == 5||section == 6||section == 7) {
             index = section + 3;
         }else{
             index = section + 2;
@@ -166,7 +166,7 @@
 //配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        //猜你喜欢
+        //猜你喜欢0
         static NSString * identfier = @"GuessLikeCell";
         GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
         if (!cell) {
@@ -175,25 +175,30 @@
         MainList * likeList = self.mainBase.list[2];
         cell.likeList = likeList;
         return cell;
-    }else if (indexPath.section == 1){
-        //精品
+    }else if (indexPath.section == 1 || indexPath.section == 8){
+        //精品1  音乐好时光8
         static NSString * identifier = @"ExquisitelyCell";
         ExquisitelyCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         if (!cell) {
             cell = [[ExquisitelyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
-        MainList * exquisitely = self.mainBase.list[3];
+        MainList * exquisitely;
+        if (indexPath.section == 1) {
+            exquisitely = self.mainBase.list[3];
+        }else if (indexPath.section == 8){
+            exquisitely = self.mainBase.list[12];
+        }
         cell.exquisitelyList = exquisitely;
         return cell;
-    }else if(indexPath.section == 2||indexPath.section == 3||indexPath.section == 4||indexPath.section == 5){
-        //相声评书2,IT科技3,精品听单4,最热有声书5
+    }else if(indexPath.section == 2||indexPath.section == 3||indexPath.section == 4||indexPath.section == 5||indexPath.section == 6||indexPath.section == 7){
+        //相声评书2,IT科技3,精品听单4,最热有声书5，历史6，综艺娱乐7
         static NSString * identifier = @"TalkShowCell";
         TalkShowCell * cell = (TalkShowCell *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] lastObject];
         }
         NSInteger index;
-        if (indexPath.section == 4 || indexPath.section == 5) {
+        if (indexPath.section == 4 || indexPath.section == 5 || indexPath.section == 6 || indexPath.section == 7) {
             index = indexPath.section + 3;
         }else{
             index = indexPath.section + 2;
@@ -218,9 +223,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return (VIEWHIEGTH)*2+ROWSPACING;
-    }else if (indexPath.section == 1){
+    }else if (indexPath.section == 1 || indexPath.section == 8){
         return (VIEWHIEGTH+20);
-    }else if (indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 4|| indexPath.section == 5){
+    }else if (indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 4|| indexPath.section == 5|| indexPath.section == 6|| indexPath.section == 7){
         return 100;
     }
     return 50;

@@ -45,6 +45,7 @@
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = 100 + i;
         
+        
         [view addSubview:subTitleLabel];
         [view addSubview:titleLabel];
         [view addSubview:imageView];
