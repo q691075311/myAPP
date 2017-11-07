@@ -32,6 +32,7 @@
 #import "TabbarPlayView.h"
 #import "DataModels.h"
 #import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
 //数据缓存类
 #import "YYCache.h"
 

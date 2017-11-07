@@ -72,10 +72,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTZ-SB-6g1">
-                    <rect key="frame" x="16" y="9.5" width="30" height="45"/>
+                    <rect key="frame" x="16" y="23" width="42" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="izj-Oj-Ncr"/>
-                        <constraint firstAttribute="width" constant="30" id="x1q-m8-Bwh"/>
+                        <constraint firstAttribute="height" constant="18" id="izj-Oj-Ncr"/>
+                        <constraint firstAttribute="width" constant="42" id="x1q-m8-Bwh"/>
                     </constraints>
                     <connections>
                         <action selector="backBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="no4-HK-W1m"/>

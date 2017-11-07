@@ -30,7 +30,7 @@
 @property (nonatomic,strong) UIView * tableViewHeaderView;//tableView的头视图
 @property (nonatomic,strong) ADScrollView * adView;//广告轮播图
 @property (nonatomic,strong) MainTabView * tabBtnView;//tabBtnView
-@property (nonatomic,strong) NSMutableArray * sectionHeaderTitleArr;
+@property (nonatomic,strong) NSMutableArray * sectionHeaderTitleArr;//区头标题
 
 @end
 
@@ -40,13 +40,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navBar removeFromSuperview];
-    
+    //请求首页数据
+    [self requestMainInfo];
+    __weak typeof(self) weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf requestMainInfo];
+        
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //请求首页数据
-    [self requestMainInfo];
-    
 }
 - (NSArray *)advArr{
     if (!_advArr) {
@@ -75,7 +78,7 @@
 #pragma mark -- 初始化界面内容
 - (void)initContentView{
     self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MainContentHeigth);
-    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    self.tableView.backgroundColor = [UIColor ry_colorWithHexString:@"#f3f4f5"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self createTableViewHeadView];
@@ -139,7 +142,7 @@
 //分区的区数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 //    return self.sectionHeaderTitleArr.count;
-    return 3;
+    return 6;
 }
 //row的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -147,8 +150,14 @@
         return 1;
     }else if (section == 1){
         return 1;
-    }else if (section == 2){
-        MainList * mainList = self.mainBase.list[4];
+    }else if (section == 2||section == 3||section == 4||section == 5) {
+        NSInteger index;
+        if (section == 4||section == 5) {
+            index = section + 3;
+        }else{
+            index = section + 2;
+        }
+        MainList * mainList = self.mainBase.list[index];
         NSArray * arr = mainList.list;
         return arr.count;
     }
@@ -157,6 +166,7 @@
 //配置cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
+        //猜你喜欢
         static NSString * identfier = @"GuessLikeCell";
         GuessLikeCell * cell = [tableView dequeueReusableCellWithIdentifier:identfier];
         if (!cell) {
@@ -166,6 +176,7 @@
         cell.likeList = likeList;
         return cell;
     }else if (indexPath.section == 1){
+        //精品
         static NSString * identifier = @"ExquisitelyCell";
         ExquisitelyCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         if (!cell) {
@@ -174,14 +185,32 @@
         MainList * exquisitely = self.mainBase.list[3];
         cell.exquisitelyList = exquisitely;
         return cell;
-    }else if (indexPath.section == 2){
+    }else if(indexPath.section == 2||indexPath.section == 3||indexPath.section == 4||indexPath.section == 5){
+        //相声评书2,IT科技3,精品听单4,最热有声书5
         static NSString * identifier = @"TalkShowCell";
         TalkShowCell * cell = (TalkShowCell *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
         if (!cell) {
             cell = [[[NSBundle mainBundle] loadNibNamed:identifier owner:self options:nil] lastObject];
         }
-        
+        NSInteger index;
+        if (indexPath.section == 4 || indexPath.section == 5) {
+            index = indexPath.section + 3;
+        }else{
+            index = indexPath.section + 2;
+        }
+        MainList * talkShow = self.mainBase.list[index];
+        NSArray * arr = talkShow.list;
+        NSDictionary * dic = arr[indexPath.row];
+        MainList * item = [MainList modelObjectWithDictionary:dic];
+        if (indexPath.section == 4) {
+            cell.listenList = item;
+        }else{
+            cell.talkShowData = item;
+        }
         return cell;
+    }else{
+        
+        
     }
     return nil;
 }
@@ -191,7 +220,7 @@
         return (VIEWHIEGTH)*2+ROWSPACING;
     }else if (indexPath.section == 1){
         return (VIEWHIEGTH+20);
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 4|| indexPath.section == 5){
         return 100;
     }
     return 50;
@@ -247,6 +276,7 @@
         [self addTabView];
         //刷新tableView
         [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 - (void)didReceiveMemoryWarning {

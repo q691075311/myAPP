@@ -20,12 +20,11 @@
     // Initialization code
     
 }
-- (void)drawRect:(CGRect)rect{
-    
-}
+
 - (void)setLikeList:(MainList *)likeList{
     NSArray * arr = likeList.list;
     NSMutableArray * likeArr = [[NSMutableArray alloc] init];
+    [likeArr removeAllObjects];
     for (NSDictionary * dic in arr) {
         MainList * likeItem = [MainList modelObjectWithDictionary:dic];
         [likeArr addObject:likeItem];
