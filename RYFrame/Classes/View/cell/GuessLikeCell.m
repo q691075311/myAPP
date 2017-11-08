@@ -29,30 +29,41 @@
         MainList * likeItem = [MainList modelObjectWithDictionary:dic];
         [likeArr addObject:likeItem];
     }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        for (int i = 0; i < likeArr.count; i ++) {
+            MainList * likeItem = likeArr[i];
+            NSInteger row = i % 3;//3是列数 0 1 2 0 1 2
+            NSInteger col = i / 3;//3是列数 0 0 0 1 1 1
+            UIView * view = [[UIView alloc] initWithFrame:CGRectMake(15 + (row * ((VIEWWIDTH) +ROWSPACING)), col * (VIEWHIEGTH + COLSPACING), VIEWWIDTH, VIEWHIEGTH)];
+            //添加图片
+            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, view.width, view.width)];
+            imageView.tag = 10+i;
+            //添加label
+            CGFloat H = [RYTool getLabelHeightWithString:likeItem.title withLabelWidth:view.width withFontSize:11];
+            UILabel * label =[[UILabel alloc] initWithFrame:CGRectMake(0, imageView.hiegth+5, view.width, H)];
+            label.tag = 100+i;
+            label.numberOfLines = 2;
+            label.font = [UIFont systemFontOfSize:11];
+            //添加Btn
+            UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.frame = CGRectMake(0, 0, view.width, view.hiegth);
+            [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+            btn.tag = 1000+i;
+            
+            [view addSubview:label];
+            [view addSubview:imageView];
+            [view addSubview:btn];
+            [self addSubview:view];
+        }
+    });
     for (int i = 0; i < likeArr.count; i ++) {
         MainList * likeItem = likeArr[i];
-        NSInteger row = i % 3;//3是列数 0 1 2 0 1 2
-        NSInteger col = i / 3;//3是列数 0 0 0 1 1 1
-        UIView * view = [[UIView alloc] initWithFrame:CGRectMake(15 + (row * ((VIEWWIDTH) +ROWSPACING)), col * (VIEWHIEGTH + COLSPACING), VIEWWIDTH, VIEWHIEGTH)];
-        //添加图片
-        UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, view.width, view.width)];
+        UIImageView * imageView = [self viewWithTag:10+i];
         [imageView sd_setImageWithURL:[NSURL URLWithString:likeItem.pic]];
-        //添加label
-        CGFloat H = [RYTool getLabelHeightWithString:likeItem.title withLabelWidth:view.width withFontSize:11];
-        UILabel * label =[[UILabel alloc] initWithFrame:CGRectMake(0, imageView.hiegth+5, view.width, H)];
+        UILabel * label = [self viewWithTag:100+i];
         label.text = likeItem.title;
-        label.numberOfLines = 2;
-        label.font = [UIFont systemFontOfSize:11];
-        //添加Btn
-        UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(0, 0, view.width, view.hiegth);
-        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-        btn.tag = 100+i;
         
-        [view addSubview:label];
-        [view addSubview:imageView];
-        [view addSubview:btn];
-        [self addSubview:view];
     }
 }
 
