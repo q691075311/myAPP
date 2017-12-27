@@ -26,6 +26,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor ry_colorWithHexString:@"#f3f4f5"];
+        
         [self addTopViewSubview];
         [self addRedLineView];
     }

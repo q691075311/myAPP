@@ -26,9 +26,9 @@
     if (self) {
         RYNavBar * ryView = [[[NSBundle mainBundle] loadNibNamed:@"RYNavBar" owner:self options:nil] lastObject];
         ryView.frame = frame;
-        ryView.autoresizingMask = self.autoresizingMask;
-        ryView.alpha = self.alpha;
-        ryView.hidden = self.hidden;
+        self.autoresizingMask = ryView.autoresizingMask;
+        self.alpha = ryView.alpha;
+        self.hidden = ryView.hidden;
         ryView.backgroundColor = [UIColor whiteColor];
         return ryView;
     }
